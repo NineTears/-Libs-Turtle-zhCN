@@ -1,0 +1,115 @@
+## Interface: 11200
+## Title: !Libs
+## Notes: A package of all the Ace SVN libraries
+## Title-zhCN:!Libs |CFFFF0000核心函数库
+## Notes-zhCN:大部分插件依赖的基本函数库，为开发者提供很多方便的接口
+## Author: Various
+## Version: 1.0.3
+# SE\SpecialEvents-Mail-2: bigfix in ruRU (1.0.1); Babble-Item-2.0 added (1.0.2) by CFM; Babble-Spell-2.2 added more neutral and bosses spells (1.0.3)
+## OptionalDeps: Warmup, BugGrabber
+## X-Category: Library
+## X-Credits: Maus & Co. (Updating, localizing libraries)
+## X-Website: https://vk.com/wowruru
+
+!Compatibility\api\api.xml					 
+!MyLib\api\api.xml
+Stubby.xml
+
+Ace\Ace.xml
+Ace\Locale\AceLocals.lua
+Ace\Locale\AceLocals_zhCN.lua
+Ace\Ace.lua
+Ace\AceDB.lua
+Ace\AceData.lua
+Ace\AceChatCmd.lua
+Ace\AceCommands.lua
+Ace\AceEvent.lua
+Ace\AceState.lua
+Ace\AceHook.lua
+Ace\AceModule.lua
+Ace\AceAddon.lua
+
+Ace2\AceLibrary\AceLibrary.lua
+Ace2\AceOO-2.0\AceOO-2.0.lua
+
+Compost-2.0\Compost-2.0.lua
+Crayon-2.0\Crayon-2.0.lua
+
+Ace2\AceEvent-2.0\AceEvent-2.0.lua
+Ace2\AceConsole-2.0\AceConsole-2.0.lua
+Ace2\AceAddon-2.0\AceAddon-2.0.lua
+Ace2\AceDB-2.0\AceDB-2.0.lua
+Ace2\AceDebug-2.0\AceDebug-2.0.lua
+Ace2\AceHook-2.0\AceHook-2.0.lua
+Ace2\AceHook-2.1\AceHook-2.1.lua
+Ace2\AceLocale-2.0\AceLocale-2.0.lua
+Ace2\AceLocale-2.1\AceLocale-2.1.lua
+Ace2\AceLocale-2.2\AceLocale-2.2.lua
+Ace2\AceTab-2.0\AceTab-2.0.lua
+Ace2\AceComm-2.0\AceComm-2.0.lua
+Ace2\AceModuleCore-2.0\AceModuleCore-2.0.lua
+
+Deformat-2.0\Deformat-2.0.lua
+Gratuity-2.0\Gratuity-2.0.lua
+
+SE\SpecialEvents-Aura-2.0\SpecialEvents-Aura-2.0.xml
+SE\SpecialEvents-LearnSpell-2.0\SpecialEvents-LearnSpell-2.0.lua
+SE\SpecialEvents-Mount-2.0\SpecialEvents-Mount-2.0.lua
+SE\SpecialEvents-Movement-2.0\SpecialEvents-Movement-2.0.lua
+
+Babble\Babble-Boss-2.2\Babble-Boss-2.2.lua
+Babble\Babble-Class-2.2\Babble-Class-2.2.lua
+Babble\Babble-Faction-2.2\Babble-Faction-2.2.lua
+Babble\Babble-ItemSet-2.2\Babble-ItemSet-2.2.lua
+Babble\Babble-Spell-2.2\Babble-Spell-2.2.lua
+Babble\Babble-SpellTree-2.2\Babble-SpellTree-2.2.lua
+Babble\Babble-Zone-2.2\Babble-Zone-2.2.lua
+Babble\Babble-Zone-2.3\Babble-Zone-2.3.lua
+
+PT\Core\PTEmbed.lua
+PT\TradeSkills\PTTradeskillsEmbed.lua
+PT\Elements\Misc\PTEmbedElemMisc.lua
+PT\Elements\EquipSets\PTEmbedElemEquipSets.lua
+PT\Elements\Food\PTEmbedElemFood.lua
+PT\Elements\Instance\PTEmbedElemInstance.lua
+PT\Elements\Raid\PTEmbedElemRaid.lua
+PT\Elements\Tradeskills\PTEmbedElemTradeskill.lua
+PT\Elements\AQ\PTEmbedElemAhnQiraj.lua
+PT\Elements\ZG\PTEmbedElemZulGurub.lua
+
+Dewdrop-2.0\Dewdrop-2.0.lua
+DruidManaLib-1.0\DruidManaLib-1.0.lua
+
+Tablet-2.0\Tablet-2.0.lua
+FuBarPlugin-2.0\FuBarPlugin-2.0.lua
+
+RosterLib-2.0\RosterLib-2.0.lua
+Banzai-1.0\Banzai-1.0.lua
+Abacus-2.0\Abacus-2.0.lua
+Tourist-2.0\Tourist-2.0.lua
+PaintChips-2.0\PaintChips-2.0.lua
+CandyBar-2.1\CandyBar-2.1.lua
+SpellCache-1.0\SpellCache-1.0.lua
+SpellStatus-1.0\SpellStatus-1.0.lua
+SpellStatus-AimedShot-1.0\SpellStatus-AimedShot-1.0.lua
+OneStorage-2.0\OneStorage-2.0.lua
+Surface-1.0\Surface-1.0.lua
+HealComm-1.0\HealComm-1.0.lua
+Waterfall-1.0\Waterfall-1.0.lua
+MyTexture\skin.lua
+
+## 鼠标提示增强
+EnhTooltip\Stubby.xml
+EnhTooltip\TinyMoneyFrame.xml
+EnhTooltip\Tooltip.xml
+
+CastLib-1.0\CastLib-1.0.lua
+
+ItemBonusLib-1.0\Locales\enUS.lua
+ItemBonusLib-1.0\Locales\frFR.lua
+ItemBonusLib-1.0\Locales\deDE.lua
+ItemBonusLib-1.0\Locales\ruRU.lua
+ItemBonusLib-1.0\ItemBonusLib-1.0.lua
+FiveSecLib-1.0\FiveSecLib-1.0.lua
+
+MrBCatLib\MrBCatLib.xml

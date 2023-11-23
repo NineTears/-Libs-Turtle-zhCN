@@ -1,0 +1,7 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">	
+<Include file="MrBCatUnits.lua"/>
+<Include file="MrBCatItems.lua"/>
+<Include file="MrBCatAreas.lua"/>
+<Include file="MrBCatpftitle.lua"/>
+<Include file="MrBCatLib.lua"/>
+</Ui>

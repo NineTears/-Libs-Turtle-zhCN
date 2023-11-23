@@ -1,0 +1,8 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="LibStub.lua"/>
+	<Script file="LibItem-enUS.lua"/>
+	<Script file="LibItem-Level.lua"/>
+	<Script file="LibMapOverlayData.lua"/>
+	<Script file="LibMobHealthCache.lua"/>
+	<Script file="LibSmoothStatusBar.lua"/>
+</Ui>
