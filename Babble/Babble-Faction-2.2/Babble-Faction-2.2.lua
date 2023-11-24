@@ -8,7 +8,7 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2023-11-23
+-- Last update: 2023-11-25
 
 local MAJOR_VERSION = "Babble-Faction-2.2"
 local MINOR_VERSION = tonumber(string.sub("$Revision: 1000 $", 12, -3))
@@ -75,17 +75,16 @@ BabbleFaction:RegisterTranslations("enUS", function()
 	["Honored"] = true,
 	["Revered"] = true,
 	["Exalted"] = true,
-	}
-end)
 
-BabbleFaction:RegisterTranslations("zhCN", function()
-	return {
+	-- Wind汉化修复Turtle-WOW-zhCN端
+	-- https://github.com/NineTears/Atlas-Turtle-zhCN
+	-- Last update: 2023-11-25
 
--- Player Factions
+	-- Player Factions
 	["Alliance"]  = "联盟",
 	["Horde"]  = "部落",
 
--- Classic Factions
+	-- Classic Factions
 	["Argent Dawn"]  = "银色黎明",
 	["Bloodsail Buccaneers"]  = "血帆海盗",
 	["Booty Bay"]  = "藏宝海湾",
@@ -121,8 +120,60 @@ BabbleFaction:RegisterTranslations("zhCN", function()
 	["Wintersaber Trainers"]  = "冬刃豹训练师",
 	["Zandalar Tribe"]  = "赞达拉部族",
 
--- Reputation Levels
-["Neutral"]  = "中立",
+	-- Reputation Levels
+	["Neutral"]  = "中立",
+	["Friendly"]  = "友善",
+	["Honored"]  = "尊敬",
+	["Revered"]  = "崇敬",
+	["Exalted"]  = "崇拜",
+	}
+end)
+
+BabbleFaction:RegisterTranslations("zhCN", function()
+	return {
+
+	-- Player Factions
+	["Alliance"]  = "联盟",
+	["Horde"]  = "部落",
+
+	-- Classic Factions
+	["Argent Dawn"]  = "银色黎明",
+	["Bloodsail Buccaneers"]  = "血帆海盗",
+	["Booty Bay"]  = "藏宝海湾",
+	["Brood of Nozdormu"]  = "诺兹多姆的子嗣",
+	["Cenarion Circle"]  = "塞纳里奥议会",
+	["Darkmoon Faire"]  = "暗月马戏团",
+	["Darkspear Trolls"]  = "暗矛巨魔",
+	["Darnassus"]  = "达纳苏斯",
+	["The Defilers"]  = "污染者",
+	["Everlook"]  = "永望镇",
+	["Frostwolf Clan"]  = "霜狼氏族",
+	["Gadgetzan"]  = "加基森",
+	["Gelkis Clan Centaur"]  = "吉尔吉斯半人马",
+	["Gnomeregan Exiles"]  = "诺莫瑞根流亡者",
+	["Hydraxian Waterlords"]  = "海达希亚水元素",
+	["Ironforge"]  = "铁炉堡",
+	["The League of Arathor"]  = "阿拉索联军",
+	["Magram Clan Centaur"]  = "玛格拉姆半人马",
+	["Orgrimmar"]  = "奥格瑞玛",
+	["Ratchet"]  = "棘齿城",
+	["Ravenholdt"]  = "拉文霍德",
+	["Silverwing Sentinels"]  = "银翼哨兵",
+	["Shen'dralar"]  = "辛德拉",
+	["Stormpike Guard"]  = "雷矛卫队",
+	["Stormwind"]  = "暴风城",
+	["Syndicate"]  = "辛迪加",
+	["Thorium Brotherhood"]  = "瑟银兄弟会",
+	["Thunder Bluff"]  = "雷霆崖",
+	["Timbermaw Hold"]  = "木喉要塞",
+	["Undercity"]  = "幽暗城",
+	["Warsong Outriders"]  = "战歌侦察骑兵",
+	["Wildhammer Clan"]  = "蛮锤部族",
+	["Wintersaber Trainers"]  = "冬刃豹训练师",
+	["Zandalar Tribe"]  = "赞达拉部族",
+
+	-- Reputation Levels
+	["Neutral"]  = "中立",
 	["Friendly"]  = "友善",
 	["Honored"]  = "尊敬",
 	["Revered"]  = "崇敬",

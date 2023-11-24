@@ -11,7 +11,7 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2023-11-23
+-- Last update: 2023-11-25
 
 local MAJOR_VERSION = "Babble-Class-2.2"
 local MINOR_VERSION = tonumber(string.sub("$Revision: 14410 $", 12, -3))
@@ -41,6 +41,20 @@ BabbleClass:RegisterTranslations("enUS", function()
 		["Paladin"] = true,
 		["Shaman"] = true,
 		["Rogue"] = true,
+
+        -- Wind汉化修复Turtle-WOW-zhCN端
+        -- https://github.com/NineTears/Atlas-Turtle-zhCN
+        -- Last update: 2023-11-25
+
+		["Warlock"] = "术士",
+		["Warrior"] = "战士",
+		["Hunter"] = "猎人",
+		["Mage"] = "法师",
+		["Priest"] = "牧师",
+		["Druid"] = "德鲁伊",
+		["Paladin"] = "圣骑士",
+		["Shaman"] = "萨满祭司",
+		["Rogue"] = "盗贼",
 	}
 end)
 
