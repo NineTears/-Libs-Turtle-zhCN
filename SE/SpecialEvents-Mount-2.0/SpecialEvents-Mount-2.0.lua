@@ -47,16 +47,6 @@ local Mount_List = {
 	"inv_misc_key_06",     -- 工程坐骑
 	"inv_misc_key_12",     -- 工程坐骑
 	"spell_magic_polymorphchicken", -- 魔法公鸡
-	"ability_racial_bearform",
-	"ability_druid_catform",
-	"ability_druid_travelform",
-    "spell_nature_forceofnature",
-	"ability_druid_aquaticform",
-	"spell_nature_spiritwolf",
-    "ability_hunter_pet_turtle",
-    "inv_pet_speedy",
-    "inv_misc_head_dragon_black", 
-    "ability_bullrush", 
 }
 
 function lib:PLAYER_AURAS_CHANGED()

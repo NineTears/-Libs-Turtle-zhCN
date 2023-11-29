@@ -111,5 +111,3 @@ ItemBonusLib-1.0\Locales\deDE.lua
 ItemBonusLib-1.0\Locales\ruRU.lua
 ItemBonusLib-1.0\ItemBonusLib-1.0.lua
 FiveSecLib-1.0\FiveSecLib-1.0.lua
-
-MrBCatLib\MrBCatLib.xml
