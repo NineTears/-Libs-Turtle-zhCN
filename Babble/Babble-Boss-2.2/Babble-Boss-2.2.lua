@@ -1,6 +1,6 @@
 ﻿--[[
 Name: Babble-Boss-2.2
-Revision: 20004
+Revision: 20006
 Author(s): ckknight (ckknight@gmail.com)
 Website: http://ckknight.wowinterface.com/
 Documentation: http://wiki.wowace.com/index.php/Babble-Boss-2.2
@@ -11,10 +11,10 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2023-11-25
+-- Last update: 2023-12-03
 
 local MAJOR_VERSION = "Babble-Boss-2.2"
-local MINOR_VERSION = 20004
+local MINOR_VERSION = 20006
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 
@@ -165,7 +165,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		["Hate'rel"] = true,
 		["Hazzas"] = true,
 		["Hearthsinger Forresten"] = true,
-		["The Unforgiven"] = true;
+		["The Unforgiven"] = true,
 		["High Interrogator Gerstahn"] = true,
 		["Highlord Omokk"] = true,
 		["Hukku"] = true,
@@ -381,75 +381,75 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		["Quartermaster Zigris"] = true,
 		["Gizrul the Slavener"] = true,
 		["Ghok Bashguud"] = true,
-		["Jed Runewatcher"] = true;
-		["Lord Valthalak"] = true;
-		["Grubbis"] = true;
-		["Chomper"] = true;
-		["Viscous Fallout"] = true;
-		["Electrocutioner 6000"] = true;
-		["Crowd Pummeler 9-60"] = true;
-		["Dark Iron Ambassador"] = true;
-		["Mekgineer Thermaplugg"] = true;
-		["Houndmaster Loksey"] = true;
-		["Arcanist Doan"] = true;
-		["Herod"] = true;
-		["High Inquisitor Fairbanks"] = true;
-		["Scarlet Commander Mograine"] = true;
-		["High Inquisitor Whitemane"] = true;
-		["Interrogator Vishas"] = true;
-		["Bloodmage Thalnos"] = true;
-		["Ironspine"] = true;
-		["Azshir the Sleepless"] = true;
-		["Fallen Champion"] = true;
-		["Lord Blackwood"] = true;
-		["Death Knight Darkreaver"] = true;
-		["Kormok"] = true;
-		["Skul"] = true;
-		["Balzaphon"] = true;
-		["Malor the Zealous"] = true;
-		["Sothos"] = true;
-		["Jarien"] = true;
-		["Stonespine"] = true;
-		["Rhahk'Zor"] = true;
-		["Miner Johnson"] = true;
-		["Sneed"] = true;
-		["Gilnid"] = true;
-		["Captain Greenskin"] = true;
-		["Edwin VanCleef"] = true;
-		["Mr. Smite"] = true;
-		["Cookie"] = true;
-		["Targorr the Dread"] = true;
-		["Kam Deepfury"] = true;
-		["Hamhock"] = true;
-		["Bazil Thredd"] = true;
-		["Dextren Ward"] = true;
-		["Bruegal Ironknuckle"] = true;
-		["Baelog"] = true;
-		["Eric \"The Swift\""] = true;
-		["Olaf"] = true;
-		["Revelosh"] = true;
-		["Ironaya"] = true;
-		["Obsidian Sentinel"] = true;
-		["Ancient Stone Keeper"] = true;
-		["Galgann Firehammer"] = true;
-		["Grimlok"] = true;
-		["Archaedas"] = true;
-		["Sever"] = true;
-		["Scorn"] = true;
-		["Rethilgore"] = true;
-		["Atiesh"] = true;
-		["Stratholme Courier"] = true;
+		["Jed Runewatcher"] = true,
+		["Lord Valthalak"] = true,
+		["Grubbis"] = true,
+		["Chomper"] = true,
+		["Viscous Fallout"] = true,
+		["Electrocutioner 6000"] = true,
+		["Crowd Pummeler 9-60"] = true,
+		["Dark Iron Ambassador"] = true,
+		["Mekgineer Thermaplugg"] = true,
+		["Houndmaster Loksey"] = true,
+		["Arcanist Doan"] = true,
+		["Herod"] = true,
+		["High Inquisitor Fairbanks"] = true,
+		["Scarlet Commander Mograine"] = true,
+		["High Inquisitor Whitemane"] = true,
+		["Interrogator Vishas"] = true,
+		["Bloodmage Thalnos"] = true,
+		["Ironspine"] = true,
+		["Azshir the Sleepless"] = true,
+		["Fallen Champion"] = true,
+		["Lord Blackwood"] = true,
+		["Death Knight Darkreaver"] = true,
+		["Kormok"] = true,
+		["Skul"] = true,
+		["Balzaphon"] = true,
+		["Malor the Zealous"] = true,
+		["Sothos"] = true,
+		["Jarien"] = true,
+		["Stonespine"] = true,
+		["Rhahk'Zor"] = true,
+		["Miner Johnson"] = true,
+		["Sneed"] = true,
+		["Gilnid"] = true,
+		["Captain Greenskin"] = true,
+		["Edwin VanCleef"] = true,
+		["Mr. Smite"] = true,
+		["Cookie"] = true,
+		["Targorr the Dread"] = true,
+		["Kam Deepfury"] = true,
+		["Hamhock"] = true,
+		["Bazil Thredd"] = true,
+		["Dextren Ward"] = true,
+		["Bruegal Ironknuckle"] = true,
+		["Baelog"] = true,
+		["Eric \"The Swift\""] = true,
+		["Olaf"] = true,
+		["Revelosh"] = true,
+		["Ironaya"] = true,
+		["Obsidian Sentinel"] = true,
+		["Ancient Stone Keeper"] = true,
+		["Galgann Firehammer"] = true,
+		["Grimlok"] = true,
+		["Archaedas"] = true,
+		["Sever"] = true,
+		["Scorn"] = true,
+		["Rethilgore"] = true,
+		["Atiesh"] = true,
+		["Stratholme Courier"] = true,
 		["Elder Mottled Boar"] = true;	
-		["Stoneskin Gargoyle"] = true;
-		["Gurubashi Berserker"] = true;
-		["Ancient Core Hound"] = true;
-		["Sorcerer Ashcrombe"] = true;
-		["Alterac Valley"] = true;
-		["Arathi Basin"] = true;
+		["Stoneskin Gargoyle"] = true,
+		["Gurubashi Berserker"] = true,
+		["Ancient Core Hound"] = true,
+		["Sorcerer Ashcrombe"] = true,
+		["Alterac Valley"] = true,
+		["Arathi Basin"] = true,
 
         -- Wind汉化修复Turtle-WOW-zhCN端
         -- https://github.com/NineTears/Atlas-Turtle-zhCN
-        -- Last update: 2023-11-25
+        -- Last update: 2023-12-03
 
         ["Avalanchion"] = "阿瓦兰奇奥",
         ["The Windreaver"] = "烈风掠夺者",
@@ -843,7 +843,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Dextren Ward"] = "迪克斯特·瓦德",
         ["Bruegal Ironknuckle"] = "布鲁戈·艾尔克纳寇",
         ["Baelog"] = "巴尔洛戈",
-        ["Eric \"The Swift\""] = "赫格拉姆";
+        ["Eric \"The Swift\""] = "赫格拉姆",
         ["Olaf"] = "奥拉夫",
         ["Revelosh"] = "鲁维罗什",
         ["Ironaya"] = "艾隆纳亚",
@@ -1211,7 +1211,7 @@ BabbleBoss:RegisterTranslations("esES", function()
 		["Scorn"] = "Desdén";
 		["Rethilgore"] = "Rethilgore";
 		["Atiesh"] = "Atiesh";
-		["Stratholme Courier"] = "Mensajero de Stratholme";
+		["Stratholme Courier"] = "Mensajero de Stratholme",
         ["Elder Mottled Boar"] = "Jabalí jaspeado mayor",	
         ["Stoneskin Gargoyle"] = "Gárgola piel de piedra",
 		["Shadowpriest Sezz'ziz"] = "Sacerdote oscuro Sezz'ziz",
@@ -2390,7 +2390,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Dextren Ward"] = "迪克斯特·瓦德",
         ["Bruegal Ironknuckle"] = "布鲁戈·艾尔克纳寇",
         ["Baelog"] = "巴尔洛戈",
-        ["Eric \"The Swift\""] = "赫格拉姆";
+        ["Eric \"The Swift\""] = "赫格拉姆",
         ["Olaf"] = "奥拉夫",
         ["Revelosh"] = "鲁维罗什",
         ["Ironaya"] = "艾隆纳亚",

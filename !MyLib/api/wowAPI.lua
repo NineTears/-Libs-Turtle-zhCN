@@ -427,58 +427,38 @@ end
 function UnitColor(unit)
 	local r, g, b
 
-	if ( not UnitIsPlayer(unit) and ( not UnitIsConnected(unit) or UnitIsDeadOrGhost(unit) ) ) then
-		r, g, b = 0.5, 0.5, 0.5
-	elseif UnitIsPlayer(unit) then
-		local colour = RAID_CLASS_COLORS[select(2, UnitClass(unit))]
-		if not colour then return end
-		
-		r = colour.r
-		g = colour.g
-		b = colour.b
-	else
-		if UnitPlayerControlled(unit) then
-			if UnitCanAttack(unit, "player") then
-				if not UnitCanAttack("player", unit) then
-					r = 0.0
-					g = 0.0
-					b = 1.0
-				else
-					r = UnitReactionColor[2].r
-					g = UnitReactionColor[2].g
-					b = UnitReactionColor[2].b
-				end
-			elseif UnitCanAttack("player", unit) then
-				r = UnitReactionColor[4].r
-				g = UnitReactionColor[4].g
-				b = UnitReactionColor[4].b
-			elseif UnitIsPVP(unit) then
-				r = UnitReactionColor[6].r
-				g = UnitReactionColor[6].g
-				b = UnitReactionColor[6].b
-			else
-				r = 0.0
-				g = 1.0
-				b = 0.0
-			end
-		elseif UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit) then
-			r = 0.5
-			g = 0.5
-			b = 0.5
+	if UnitIsPlayer(unit) then
+		local color = RAID_CLASS_COLORS[select(2, UnitClass(unit))]
+		if color then 
+			r, g, b = color.r, color.g, color.b 
 		else
-			local reaction = UnitReaction(unit, "player")
-			if reaction then
-				r = UnitReactionColor[reaction].r
-				g = UnitReactionColor[reaction].g
-				b = UnitReactionColor[reaction].b
+			if ( UnitIsFriend("player", unit) ) then 
+				r, g, b = 0.0, 1.0, 0.0; 
+			else 
+				r, g, b = 1.0, 0.0, 0.0; 
+			end 
+		end 
+	else 
+		if UnitCanAttack("player", unit) then 
+			if UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit) then 
+				r, g, b = 0.5, 0.5, 0.5; 
+		   
+		   
 			else
-				r = 0
-				g = 0
-				b = 1.0
+				-- local Pa, Pg, Pb = SetPercentColor(UnitHealth(unit), UnitHealthMax(unit))
+				-- if Pa then r, g, b = Pa, Pg, Pb end
+				if ( UnitIsFriend("player", unit) ) then
+					r, g, b = 0.0, 1.0, 0.0;
+				else
+					r, g, b = TargetFrameNameBackground:GetVertexColor();
+				end	
 			end
+		else
+			local color = UnitReactionColor[UnitReaction(unit, "player")]
+			if color then r, g, b = color.r, color.g, color.b end
 		end
 	end
-	
+
 	return r, g, b
 end
 
@@ -490,12 +470,12 @@ function SetPercentColor(min, max)
 	if (min and max) then
 		local v =  tonumber(min) / tonumber(max)
 		if (v >= 0 and v <= 1) then
-			if (v > 0.5) then
+			if (v > 0.2) then
 				r = (1.0 - v) * 2
-				g = 1.0
+				g = v * 2
 			else
 				r = 1.0
-				g = v * 2
+				g = 0
 			end
 		end
 	end

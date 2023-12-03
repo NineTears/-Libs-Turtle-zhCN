@@ -11,7 +11,7 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2023-11-25
+-- Last update: 2023-12-03
 
 local MAJOR_VERSION = "Babble-Zone-2.3"
 local MINOR_VERSION = tonumber(string.sub("$Revision: 15636 $", 12, -3))
@@ -209,7 +209,7 @@ BabbleZone:RegisterTranslations("enUS", function()
 
         -- Wind汉化修复Turtle-WOW-zhCN端
         -- https://github.com/NineTears/Atlas-Turtle-zhCN
-        -- Last update: 2023-11-25
+        -- Last update: 2023-12-03
 
 		["Ahn'Qiraj"] = "安其拉",
 		["Alah'Thalas"] = "阿尔萨拉斯", --TurtleWOW
