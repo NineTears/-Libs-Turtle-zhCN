@@ -52,7 +52,7 @@ if GetLocale() == "deDE" then
 		["Buffs"] = "Buffs",
 		["Chat/Communication"] = "Chat/Kommunikation",
 		["Druid"] = "Druide",
-		["Hunter"] = "J�ger",
+		["Hunter"] = "Jäger",
 		["Mage"] = "Magier",
 		["Paladin"] = "Paladin",
 		["Priest"] = "Priester",
@@ -250,8 +250,8 @@ elseif GetLocale() == "zhCN" then
 	CATEGORY = "分类"
 	EMAIL = "电子邮件"
 	WEBSITE = "网站"
-	CREDITS = "Credits" -- fix
-	COMMANDS = "Commands"
+	CREDITS = "贡献" -- fix
+	COMMANDS = "命令"
 	
 	ABOUT = "关于"
 	PRINT_ADDON_INFO = "印列出插件信息"
