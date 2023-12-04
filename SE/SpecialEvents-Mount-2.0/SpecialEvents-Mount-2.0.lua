@@ -34,8 +34,7 @@ local Mount_List = {
 	"_mount_",						--常规坐骑
 	"spell_nature_swiftness",		--骸骨军马、机械陆行鸟、科多兽、地狱战马、迅猛龙等
 	"_qirajicrystal_",				--其拉共鸣水晶
-	
-	--------特殊坐骑请玩家前往小地图 Automaton-下马-增加坐骑 功能中添加--------
+
 	"hunter_pet_turtle",   --乌龟坐骑
 	"warstomp",            --斑马坐骑
 	"bullrush",            --幽灵狮鹫
@@ -47,6 +46,9 @@ local Mount_List = {
 	"inv_misc_key_06",     -- 工程坐骑
 	"inv_misc_key_12",     -- 工程坐骑
 	"spell_magic_polymorphchicken", -- 魔法公鸡
+	
+	--------特殊坐骑请玩家前往小地图 Automaton-下马-增加坐骑 功能中添加--------
+
 }
 
 function lib:PLAYER_AURAS_CHANGED()
