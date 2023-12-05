@@ -451,6 +451,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Death Talon Wyrmguard"] = true,
         ["Venom Stalker"] = true,
         ["Living Monstrosity"] = true,
+        ["Necro Stalker"] = true,
 
         -- Wind汉化修复Turtle-WOW-zhCN端
         -- https://github.com/NineTears/Atlas-Turtle-zhCN
@@ -874,6 +875,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Death Talon Wyrmguard"] = "黑翼龙人护卫",
         ["Venom Stalker"] = "毒性捕猎者",
         ["Living Monstrosity"] = "畸形妖",
+        ["Necro Stalker"] = "死灵捕猎者",
 
 	}
 end)
@@ -2426,6 +2428,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Death Talon Wyrmguard"] = "黑翼龙人护卫",
         ["Venom Stalker"] = "毒性捕猎者",
         ["Living Monstrosity"] = "畸形妖",
+        ["Necro Stalker"] = "死灵捕猎者",
 	}
 end)
 
