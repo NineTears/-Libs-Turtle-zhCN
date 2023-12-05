@@ -447,6 +447,11 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		["Alterac Valley"] = true,
 		["Arathi Basin"] = true,
 
+        -- 兼容Bigwigs增加怪物
+        ["Death Talon Wyrmguard"] = true,
+        ["Venom Stalker"] = true,
+        ["Living Monstrosity"] = true,
+
         -- Wind汉化修复Turtle-WOW-zhCN端
         -- https://github.com/NineTears/Atlas-Turtle-zhCN
         -- Last update: 2023-12-03
@@ -864,6 +869,11 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Sorcerer Ashcrombe"] = "巫师阿克鲁比",
         ["Alterac Valley"] = "奥特兰克山谷",
         ["Arathi Basin"] = "阿拉希盆地",
+
+        -- 兼容Bigwigs增加怪物
+        ["Death Talon Wyrmguard"] = "黑翼龙人护卫",
+        ["Venom Stalker"] = "毒性捕猎者",
+        ["Living Monstrosity"] = "畸形妖",
 
 	}
 end)
@@ -2411,6 +2421,11 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Sorcerer Ashcrombe"] = "巫师阿克鲁比",
         ["Alterac Valley"] = "奥特兰克山谷",
         ["Arathi Basin"] = "阿拉希盆地",
+
+        -- 兼容Bigwigs增加怪物
+        ["Death Talon Wyrmguard"] = "黑翼龙人护卫",
+        ["Venom Stalker"] = "毒性捕猎者",
+        ["Living Monstrosity"] = "畸形妖",
 	}
 end)
 
