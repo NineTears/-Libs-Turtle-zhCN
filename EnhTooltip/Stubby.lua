@@ -12,14 +12,14 @@ loading.
 
 A quick example of this is:
 -------------------------------------------
-	Stubby.RegisterBootCode("myAddOn", "CommandHandler", [[
+	Stubby.RegisterBootCode("myAddOn", "CommandHandler", 
 		local function cmdHandler(msg)
 			LoadAddOn("myAddOn")
 			MyAddOn_Command(msg)
 		end
 		SLASH_MYADDON1 = "/myaddon"
 		SlashCmdList['MYADDON'] = cmdHandler
-	]]);
+	);
 -------------------------------------------
 So, what did this just do? It registered some boot code
 (called "CommandHandler") with Stubby that Stubby will

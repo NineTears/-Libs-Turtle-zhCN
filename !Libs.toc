@@ -95,8 +95,3 @@ OneStorage-2.0\OneStorage-2.0.lua
 Surface-1.0\Surface-1.0.lua
 HealComm-1.0\HealComm-1.0.lua
 Waterfall-1.0\Waterfall-1.0.lua
-
-## 鼠标提示增强
-## EnhTooltip\Stubby.xml
-## EnhTooltip\TinyMoneyFrame.xml
-## EnhTooltip\Tooltip.xml
