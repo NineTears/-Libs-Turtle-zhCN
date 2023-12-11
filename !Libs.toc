@@ -11,7 +11,6 @@
 ## X-Credits: Maus & Co. (Updating, localizing libraries)
 ## X-Website: https://vk.com/wowruru
 
-!Compatibility\api\api.xml					 
 !MyLib\api\api.xml
 Stubby.xml
 
@@ -97,11 +96,7 @@ Surface-1.0\Surface-1.0.lua
 HealComm-1.0\HealComm-1.0.lua
 Waterfall-1.0\Waterfall-1.0.lua
 
-CastLib-1.0\CastLib-1.0.lua
-
-ItemBonusLib-1.0\Locales\enUS.lua
-ItemBonusLib-1.0\Locales\frFR.lua
-ItemBonusLib-1.0\Locales\deDE.lua
-ItemBonusLib-1.0\Locales\ruRU.lua
-ItemBonusLib-1.0\ItemBonusLib-1.0.lua
-FiveSecLib-1.0\FiveSecLib-1.0.lua
+## 鼠标提示增强
+## EnhTooltip\Stubby.xml
+## EnhTooltip\TinyMoneyFrame.xml
+## EnhTooltip\Tooltip.xml
