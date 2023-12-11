@@ -1,8 +1,9 @@
 ## Interface: 11200
 ## Title: !Libs
 ## Notes: A package of all the Ace SVN libraries
-## Title-zhCN:!Libs |CFFFF0000核心函数库
-## Notes-zhCN:大部分插件依赖的基本函数库，为开发者提供很多方便的接口
+## Title-zhCN:|CFF0055FF[插件整合]|R|CFF7FFF7F插件函数库[!Lib]|R
+## Notes-zhCN:|CFF0055FF!Libs|R|N插件基础函数库。|N|CFFFF0000核心函数库|R
+## X-Repple: 插件整合
 ## Author: Various
 ## Version: 1.0.3
 # SE\SpecialEvents-Mail-2: bigfix in ruRU (1.0.1); Babble-Item-2.0 added (1.0.2) by CFM; Babble-Spell-2.2 added more neutral and bosses spells (1.0.3)
@@ -12,7 +13,7 @@
 ## X-Website: https://vk.com/wowruru
 
 !MyLib\api\api.xml
-Stubby.xml
+## UnitAura\UnitAura.xml
 
 Ace\Ace.xml
 Ace\Locale\AceLocals.lua
@@ -32,6 +33,7 @@ Ace2\AceLibrary\AceLibrary.lua
 Ace2\AceOO-2.0\AceOO-2.0.lua
 
 Compost-2.0\Compost-2.0.lua
+Crayon\Crayon-2.0.lua
 Crayon-2.0\Crayon-2.0.lua
 
 Ace2\AceEvent-2.0\AceEvent-2.0.lua
@@ -95,3 +97,13 @@ OneStorage-2.0\OneStorage-2.0.lua
 Surface-1.0\Surface-1.0.lua
 HealComm-1.0\HealComm-1.0.lua
 Waterfall-1.0\Waterfall-1.0.lua
+ItemBonusLib-1.0\Locales\enUS.lua
+ItemBonusLib-1.0\Locales\frFR.lua
+ItemBonusLib-1.0\Locales\deDE.lua
+ItemBonusLib-1.0\Locales\ruRU.lua
+ItemBonusLib-1.0\ItemBonusLib-1.0.lua
+FiveSecLib-1.0\FiveSecLib-1.0.lua
+CastLib-1.0\CastLib-1.0.lua
+EnhTooltip\Stubby.xml
+EnhTooltip\TinyMoneyFrame.xml
+EnhTooltip\Tooltip.xml

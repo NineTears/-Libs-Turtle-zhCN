@@ -1,4 +1,6 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
+	<Script file="LibItem-buy.lua"/>
+	<Script file="LibItem-buy-1.0.lua"/>
 	<Script file="LibItem-enUS.lua"/>
 	<Script file="LibItem-enUS-1.0.lua"/>
 	<Script file="LibItem-Level.lua"/>

@@ -40,6 +40,16 @@ if GetLocale() == "zhCN" then
 	OPTIONS = "选项"
 	ARROW = " -> "
 	ARE_YOU_SURE = "你确定要 %s么?"
+elseif GetLocale() == "zhTW" then
+	OPTIONS = "選項"
+	ARROW = " > "
+	ARE_YOU_SURE = "你確定要「%s」嗎?"
+elseif GetLocale() == "koKR" then
+	OPTIONS = "설정"
+	ARE_YOU_SURE = "정말 당신은 `%s'|1을;를; 하시겠습니까?"
+elseif GetLocale() == "ruRU" then
+	OPTIONS = "Опции"
+	ARE_YOU_SURE = "Вы уверены что вы хотите %s?"
 end
 
 local DEFAULT_CONTROL_WIDTH = 180
