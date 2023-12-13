@@ -452,7 +452,7 @@ function UnitHealthBarColor(unit)
 	return r, g, b
 end
 
--- 单位颜色(高清补丁需调用)
+-- 单位颜色(露娜插件/高清补丁需调用)
 function UnitColor(unit)
 	local r, g, b
 
