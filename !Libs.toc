@@ -1,8 +1,8 @@
 ## Interface: 11200
-## Title: !Libs
-## Notes: A package of all the Ace SVN libraries
-## Title-zhCN:|CFF0055FF[插件整合]|R|CFF7FFF7F插件函数库[!Lib]|R
-## Notes-zhCN:|CFF0055FF!Libs|R|N插件基础函数库。|N|CFFFF0000核心函数库|R
+## Title: |CFF0055FF[插件整合]|R|CFF7FFF7F插件函数库[!Libs]|R
+## Notes: |CFF0055FF!Libs|R|N乌龟服1.17通用基础函数库。|N|cffffd200整合: Wind|R
+## Title-zhCN:|CFF0055FF[插件整合]|R|CFF7FFF7F插件函数库[!Libs]|R
+## Notes-zhCN:|CFF0055FF!Libs|R|N乌龟服1.17通用基础函数库。|N|cffffd200整合: Wind|R
 ## X-Repple: 插件整合
 ## Author: Various
 ## Version: 1.0.3
