@@ -393,6 +393,13 @@ function GetSpellInfo(index, bookType)
   return name, rank, icon
 end
 
+-- Reset all spell caches whenever new spells are learned/unlearned
+local resetcache = CreateFrame("Frame")
+resetcache:RegisterEvent("LEARNED_SPELL_IN_TAB")
+resetcache:SetScript("OnEvent", function()
+  spellmaxrank, spellindex, spellinfo = {}, {}, {}
+end)
+
 -- [ 延迟函数 ]
 -- 将函数添加到FIFO（先进先出）队列，以便在短暂延迟后执行。
 -- "..."        [vararg]        function, [arguments]
@@ -423,7 +430,29 @@ function QueueFunction(a1,a2,a3,a4,a5,a6,a7,a8,a9)
   timer:Show() -- start the OnUpdate
 end
 
---单位颜色
+-- 单位血条颜色(EN_UnitFrames头像插件需调用)
+function UnitHealthBarColor(unit)
+	local r, g, b
+
+	if UnitIsPlayer(unit) then
+		local color = RAID_CLASS_COLORS[select(2, UnitClass(unit))]
+		if color then r, g, b = color.r, color.g, color.b end
+	else
+		if UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit) then
+			r = 0.5
+			g = 0.5
+			b = 0.5
+		else
+			-- 1 憎恶 2 敌对 3 不善 4 中立 5 友好 6 尊敬 7 崇拜 8 ？？
+			local color = UnitReactionColor[UnitReaction(unit, "player")]
+			if color then r, g, b = color.r, color.g, color.b end
+		end
+	end
+
+	return r, g, b
+end
+
+-- 单位颜色(高清补丁需调用)
 function UnitColor(unit)
 	local r, g, b
 
