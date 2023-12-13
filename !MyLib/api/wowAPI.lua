@@ -430,64 +430,41 @@ function QueueFunction(a1,a2,a3,a4,a5,a6,a7,a8,a9)
   timer:Show() -- start the OnUpdate
 end
 
--- 单位血条颜色(EN_UnitFrames头像插件需调用)
+-- 单位血条颜色(凡人版EN_UnitFrames头像插件需调用)
 function UnitHealthBarColor(unit)
 	local r, g, b
 
 	if UnitIsPlayer(unit) then
 		local color = RAID_CLASS_COLORS[select(2, UnitClass(unit))]
 		if color then r, g, b = color.r, color.g, color.b end
+	elseif UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit) then
+		r = 0.5
+		g = 0.5
+		b = 0.5
 	else
-		if UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit) then
-			r = 0.5
-			g = 0.5
-			b = 0.5
-		else
-			-- 1 憎恶 2 敌对 3 不善 4 中立 5 友好 6 尊敬 7 崇拜 8 ？？
-			local color = UnitReactionColor[UnitReaction(unit, "player")]
-			if color then r, g, b = color.r, color.g, color.b end
-		end
+		local color = UnitReactionColor[UnitReaction(unit, "player")]
+		if color then r, g, b = color.r, color.g, color.b end
 	end
-
+	
 	return r, g, b
 end
 
--- 单位颜色(露娜插件/高清补丁需调用)
+--单位颜色
 function UnitColor(unit)
 	local r, g, b
 
 	if UnitIsPlayer(unit) then
 		local color = RAID_CLASS_COLORS[select(2, UnitClass(unit))]
-		if color then 
-			r, g, b = color.r, color.g, color.b 
-		else
-			if ( UnitIsFriend("player", unit) ) then 
-				r, g, b = 0.0, 1.0, 0.0; 
-			else 
-				r, g, b = 1.0, 0.0, 0.0; 
-			end 
-		end 
-	else 
-		if UnitCanAttack("player", unit) then 
-			if UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit) then 
-				r, g, b = 0.5, 0.5, 0.5; 
-		   
-		   
-			else
-				-- local Pa, Pg, Pb = SetPercentColor(UnitHealth(unit), UnitHealthMax(unit))
-				-- if Pa then r, g, b = Pa, Pg, Pb end
-				if ( UnitIsFriend("player", unit) ) then
-					r, g, b = 0.0, 1.0, 0.0;
-				else
-					r, g, b = TargetFrameNameBackground:GetVertexColor();
-				end	
-			end
-		else
-			local color = UnitReactionColor[UnitReaction(unit, "player")]
-			if color then r, g, b = color.r, color.g, color.b end
-		end
+		if color then r, g, b = color.r, color.g, color.b end
+	elseif UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit) then
+		r = 0.5
+		g = 0.5
+		b = 0.5
+	else
+		local color = UnitReactionColor[UnitReaction(unit, "player")]
+		if color then r, g, b = color.r, color.g, color.b end
 	end
-
+	
 	return r, g, b
 end
 
