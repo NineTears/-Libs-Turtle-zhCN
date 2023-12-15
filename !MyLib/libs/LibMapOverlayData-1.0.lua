@@ -40,3 +40,5 @@ MapOverlayData = {
     ["DeadwindPass"] = {"THEVICE:270:270:426:299", "KARAZHAN:300:245:269:337", "DEADMANSCROSSING:380:365:249:76",},
     ["AlteracValley"] = {"DUNBALDAR:270:240:348:13", "ICEBLOODGARRISON:300:300:335:172",},
     ["Moonglade"] = { "LAKEELUNEARA:555:510:244:89", }}
+
+    LibMapOverlayData = MapOverlayData

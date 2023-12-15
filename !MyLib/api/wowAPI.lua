@@ -430,25 +430,6 @@ function QueueFunction(a1,a2,a3,a4,a5,a6,a7,a8,a9)
   timer:Show() -- start the OnUpdate
 end
 
--- 单位血条颜色(凡人版EN_UnitFrames头像插件需调用)
-function UnitHealthBarColor(unit)
-	local r, g, b
-
-	if UnitIsPlayer(unit) then
-		local color = RAID_CLASS_COLORS[select(2, UnitClass(unit))]
-		if color then r, g, b = color.r, color.g, color.b end
-	elseif UnitIsTapped(unit) and not UnitIsTappedByPlayer(unit) then
-		r = 0.5
-		g = 0.5
-		b = 0.5
-	else
-		local color = UnitReactionColor[UnitReaction(unit, "player")]
-		if color then r, g, b = color.r, color.g, color.b end
-	end
-	
-	return r, g, b
-end
-
 --单位颜色
 function UnitColor(unit)
 	local r, g, b
@@ -467,6 +448,8 @@ function UnitColor(unit)
 	
 	return r, g, b
 end
+
+UnitHealthBarColor = UnitColor    -- (凡人版EN_UnitFrames单位颜色，插件需调用)
 
 --百分比颜色
 function SetPercentColor(min, max)

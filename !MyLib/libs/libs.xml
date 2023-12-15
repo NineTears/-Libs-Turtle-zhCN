@@ -1,14 +1,8 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/">
-	<Script file="LibItem-buy.lua"/>
 	<Script file="LibItem-buy-1.0.lua"/>
-	<Script file="LibItem-enUS.lua"/>
 	<Script file="LibItem-enUS-1.0.lua"/>
-	<Script file="LibItem-Level.lua"/>
 	<Script file="LibItem-Level-1.0.lua"/>
-	<Script file="LibMapOverlayData.lua"/>
 	<Script file="LibMapOverlayData-1.0.lua"/>
-	<Script file="LibMobHealthCache.lua"/>
 	<Script file="LibMobHealthCache-1.0.lua"/>
 	<Script file="LibSmoothStatusBar.lua"/>
-	<Script file="LibSmoothStatusBar-1.0.lua"/>
 </Ui>

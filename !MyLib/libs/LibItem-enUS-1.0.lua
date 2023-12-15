@@ -14882,3 +14882,5 @@ lib.Item_enUS = {
 	[16382] = "Grimoire of Devour Magic (Rank 3)",
 	[16383] = "Grimoire of Devour Magic (Rank 4)",
 }
+
+LibItem_enUS = lib.Item_enUS

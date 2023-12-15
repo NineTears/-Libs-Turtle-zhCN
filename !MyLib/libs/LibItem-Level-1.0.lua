@@ -15440,3 +15440,6 @@ lib.Item_Level = {
 [91781]=0,
 [92000]=1,
 }
+
+LID_Level  = lib
+LibItem_Level = lib.Item_Level

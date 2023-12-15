@@ -12990,3 +12990,5 @@ lib.Health_Cache = {
 	["莫格莱尼之魂:73"] = 6920,
 	["活性剧毒:81"] = 117297,
 }
+
+LibMobHealth_Cache = lib.Health_Cache

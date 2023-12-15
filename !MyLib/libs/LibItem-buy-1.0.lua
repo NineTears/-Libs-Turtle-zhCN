@@ -15898,3 +15898,5 @@ lib.Item_buy = {
 [91765]="3145",
 [92000]="250",
 }
+
+LibItem_buy = lib.Item_buy
