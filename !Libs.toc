@@ -1,9 +1,9 @@
 ## Interface: 11200
-## Title: |CFF0055FF[插件整合]|R|CFF7FFF7F插件函数库[!Libs]|R
-## Notes: |CFF0055FF!Libs|R|N乌龟服1.17通用基础函数库。|N|cffffd200整合: Wind|R
-## Title-zhCN:|CFF0055FF[插件整合]|R|CFF7FFF7F插件函数库[!Libs]|R
-## Notes-zhCN:|CFF0055FF!Libs|R|N乌龟服1.17通用基础函数库。|N|cffffd200整合: Wind|R
-## X-Repple: 插件整合
+## Title: |cffFF4500[核心]|R|cff33ffcc!Libs|R|cffffffff插件基础函数库
+## Notes: |cff33ffcc!Libs|R|cffffffff插件基础函数库|R由|cff33ffccTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N再次感谢各位朋友！
+## Title-zhCN:|cffFF4500[核心]|R|cff33ffcc!Libs|R|cffffffff插件基础函数库
+## Notes-zhCN:|cff33ffcc!Libs|R|cffffffff插件基础函数库|R由|cff33ffccTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N再次感谢各位朋友！
+## X-Repple: 核心
 ## Author: Various
 ## Version: 1.0.3
 # SE\SpecialEvents-Mail-2: bigfix in ruRU (1.0.1); Babble-Item-2.0 added (1.0.2) by CFM; Babble-Spell-2.2 added more neutral and bosses spells (1.0.3)
