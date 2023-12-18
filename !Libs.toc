@@ -1,16 +1,13 @@
 ## Interface: 11200
 ## Title: |cffFF4500[核心]|R|cff33ffcc!Libs|R|cffffffff插件基础函数库
-## Notes: |cff33ffcc!Libs|R|cffffffff插件基础函数库|R由|cff33ffccTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N再次感谢各位朋友！
+## Notes: |cff33ffcc!Libs|R|cffffffff插件基础函数库|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N再次感谢各位朋友！
 ## Title-zhCN:|cffFF4500[核心]|R|cff33ffcc!Libs|R|cffffffff插件基础函数库
-## Notes-zhCN:|cff33ffcc!Libs|R|cffffffff插件基础函数库|R由|cff33ffccTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N再次感谢各位朋友！
+## Notes-zhCN:|cff33ffcc!Libs|R|cffffffff插件基础函数库|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N再次感谢各位朋友！
 ## X-Repple: 核心
-## Author: Various
-## Version: 1.0.3
-# SE\SpecialEvents-Mail-2: bigfix in ruRU (1.0.1); Babble-Item-2.0 added (1.0.2) by CFM; Babble-Spell-2.2 added more neutral and bosses spells (1.0.3)
+## Author: Various，VE、凡人、名字不好起、NineTears(Wind)
+## Version: 1.1.4
 ## OptionalDeps: Warmup, BugGrabber
 ## X-Category: Library
-## X-Credits: Maus & Co. (Updating, localizing libraries)
-## X-Website: https://vk.com/wowruru
 
 !MyLib\api\api.xml
 ## UnitAura\UnitAura.xml
