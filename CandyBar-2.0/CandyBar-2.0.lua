@@ -1,15 +1,15 @@
 --[[
-Name: CandyBar-2.1
-Revision: $Rev: 15772 $
-Author: Ammo (wouter@muze.nl), improved by Dorann
+Name: CandyBar-2.0
+Revision: $Rev: 15771 $
+Author: Ammo (wouter@muze.nl)
 Website: http://www.wowace.com/
 Documentation: http://www.wowace.com/
 SVN: svn://svn.wowace.com/root/trunk/CandyBar/CandyBar-2.0
-Description: A timer bars library（计时条库）
+Description: A timer bars library
 Dependencies: AceLibrary, AceOO-2.0, PaintChips-2.0, (optional) Compost-2.0
 ]]
 
-local vmajor, vminor = "CandyBar-2.1", "$Revision: 15772 $"
+local vmajor, vminor = "CandyBar-2.0", "$Revision: 15771 $"
 
 if not AceLibrary then error(vmajor .. " requires AceLibrary.") end
 if not AceLibrary:IsNewVersion(vmajor, vminor) then return end
@@ -39,15 +39,10 @@ local CandyBar = Mixin {
 	"SetCandyBarWidth",
 	"SetCandyBarHeight",
 	"SetCandyBarBackgroundColor",
-    "SetCandyBarBackgroundColorRGB",
 	"SetCandyBarTextColor",
 	"SetCandyBarTimerTextColor",
 	"SetCandyBarFontSize",
 	"SetCandyBarPoint",
-	"GetCandyBarPoint",
-    "GetCandyBarCenter",
-	"GetCandyBarOffsets",
-	"GetCandyBarEffectiveScale",
 	"SetCandyBarGradient",
 	"SetCandyBarScale",
 	"SetCandyBarTimeFormat",
@@ -60,7 +55,6 @@ local CandyBar = Mixin {
 	"SetCandyBarGroupPoint",
 	"SetCandyBarGroupGrowth",
 	"UpdateCandyBarGroup",
-	"GetCandyBarNextBarPointInGroup",
 	"RegisterCandyBarWithGroup",
 	"UnregisterCandyBarWithGroup",
 	"IsCandyBarRegisteredWithGroup",
@@ -364,26 +358,6 @@ function CandyBar:SetBackgroundColor(name, color, alpha)
 
 	return true
 end
-function CandyBar:SetBackgroundColorRGB(name, r, g, b, alpha)
-	CandyBar:argCheck(name, 2, "string")
-	CandyBar:argCheck(r, 1, "number")
-    CandyBar:argCheck(g, 1, "number")
-    CandyBar:argCheck(b, 1, "number")
-
-	if not CandyBar.var.handlers[name] then return end
-
-	local ctable = {}
-    
-    ctable[1], ctable[2], ctable[3] = r, g, b
-
-	if alpha then ctable[4] = alpha else ctable[4] = 1 end
-
-	CandyBar.var.handlers[name].bgcolor = ctable
-
-	CandyBar.var.handlers[name].frame.statusbarbg:SetStatusBarColor( ctable[1], ctable[2], ctable[3], ctable[4] )
-
-	return true
-end
 
 -- Set the color for the bar text
 -- Args: name - name of the candybar
@@ -500,55 +474,6 @@ function CandyBar:SetPoint(name, point, rframe, rpoint, xoffset, yoffset)
 	CandyBar.var.handlers[name].frame:SetPoint(point, rframe,rpoint,xoffset,yoffset)
 
 	return true
-end
-
-function CandyBar:GetPoint(name)
-	CandyBar:argCheck(name, 2, "string")
-	
-	local handler = CandyBar.var.handlers[name]
-	if not handler then
-		return
-	end
-	
-	return handler.point, handler.rframe, handler.rpoint, handler.xoffset, handler.yoffset
-end
-
-function CandyBar:GetCenter(name)
-	CandyBar:argCheck(name, 2, "string")
-	
-	local handler = CandyBar.var.handlers[name]
-	if not handler then
-		return
-	end
-
-	return handler.frame:GetCenter()
-end
-
-function CandyBar:GetOffsets(name)
-	CandyBar:argCheck(name, 2, "string")
-	
-	local handler = CandyBar.var.handlers[name]
-	if not handler then
-		return
-	end
-	
-	local bottom = handler.frame:GetBottom()
-	local top = handler.frame:GetTop()
-	local left = handler.frame:GetLeft()
-	local right = handler.frame:GetRight()
-	
-	return left, top, bottom, right
-end
-
-function CandyBar:GetEffectiveScale(name)
-	CandyBar:argCheck(name, 2, "string")
-	
-	local handler = CandyBar.var.handlers[name]
-	if not handler then
-		return
-	end
-
-	return handler.frame:GetEffectiveScale()
 end
 
 -- Set the width for a bar
@@ -983,39 +908,6 @@ function CandyBar:UpdateGroup( name )
 	return true
 end
 
-function CandyBar:GetNextBarPointInGroup(name)
-	CandyBar:argCheck(name, 2, "string")
-	
-	local group = CandyBar.var.groups[name]
-	if not CandyBar.var.groups[name] then
-		return
-	end
-	
-	local xoffset = group.xoffset
-	local yoffset = group.yoffset
-	local m = -1
-	if group.growup then
-		m = 1
-	end
-	
-	local bar = 0
-	local barh = 0
-	
-	local vertspacing = group.vertspacing or 0
-	
-	for c,n in pairs(group.bars) do
-		local handler = CandyBar.var.handlers[n]
-		if handler then
-			if handler.frame:IsShown() then
-				barh = handler.height or CandyBar.var.defaults.height
-				bar = bar + barh + vertspacing
-			end
-		end
-	end
-	
-	return xoffset, yoffset + (m * bar)
-end
-
 -- Internal Method
 -- Update a bar on screen
 function CandyBar:Update( name )
@@ -1326,15 +1218,10 @@ CandyBar.SetCandyBarColor = CandyBar.SetColor
 CandyBar.SetCandyBarText = CandyBar.SetText
 CandyBar.SetCandyBarIcon = CandyBar.SetIcon
 CandyBar.SetCandyBarBackgroundColor = CandyBar.SetBackgroundColor
-CandyBar.SetCandyBarBackgroundColorRGB = CandyBar.SetBackgroundColorRGB
 CandyBar.SetCandyBarTextColor = CandyBar.SetTextColor
 CandyBar.SetCandyBarTimerTextColor = CandyBar.SetTimerTextColor
 CandyBar.SetCandyBarFontSize = CandyBar.SetFontSize
 CandyBar.SetCandyBarPoint = CandyBar.SetPoint
-CandyBar.GetCandyBarPoint = CandyBar.GetPoint
-CandyBar.GetCandyBarCenter = CandyBar.GetCenter
-CandyBar.GetCandyBarOffsets = CandyBar.GetOffsets
-CandyBar.GetCandyBarEffectiveScale = CandyBar.GetEffectiveScale
 CandyBar.SetCandyBarScale = CandyBar.SetScale
 CandyBar.SetCandyBarTimeFormat = CandyBar.SetTimeFormat
 CandyBar.SetCandyBarTimeLeft = CandyBar.SetTimeLeft
@@ -1345,7 +1232,6 @@ CandyBar.IsCandyBarGroupRegistered = CandyBar.IsGroupRegistered
 CandyBar.SetCandyBarGroupPoint = CandyBar.SetGroupPoint
 CandyBar.SetCandyBarGroupGrowth = CandyBar.SetGroupGrowth
 CandyBar.UpdateCandyBarGroup = CandyBar.UpdateGroup
-CandyBar.GetCandyBarNextBarPointInGroup = CandyBar.GetNextBarPointInGroup
 CandyBar.SetCandyBarOnClick = CandyBar.SetOnClick
 CandyBar.SetCandyBarFade = CandyBar.SetFade
 CandyBar.RegisterCandyBarWithGroup = CandyBar.RegisterWithGroup
@@ -1390,7 +1276,7 @@ function CandyBar:activate(oldLib, oldDeactivate)
 
 	if oldLib then self.var = oldLib.var
 	else
-		local _,_,ourpath = string.find(debugstack(), "\\AddOns\\(.-)CandyBar%-2%.1%.lua")
+		local _,_,ourpath = string.find(debugstack(), "\\AddOns\\(.-)CandyBar%-2%.0%.lua")
 		ourpath = "Interface\\AddOns\\"..ourpath .. "bar.tga"
 		self.var = {  -- "Local" variables go here
 			frame = CreateFrame("Frame"),
@@ -1416,7 +1302,7 @@ function CandyBar:activate(oldLib, oldDeactivate)
 			}
 		}
 		self.var.frame:Hide()
-		self.var.frame.name = "CandyBar-2.1 Frame"
+		self.var.frame.name = "CandyBar-2.0 Frame"
 	end
 	self.var.frame:SetScript("OnUpdate", self.OnUpdate)
 	self.var.frame.owner = self

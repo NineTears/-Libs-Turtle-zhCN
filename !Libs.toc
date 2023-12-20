@@ -1,8 +1,8 @@
 ## Interface: 11200
-## Title: |cffFF4500[核心]|R|cff33ffcc!Libs|R|cffffffff插件基础函数库
-## Notes: |cff33ffcc!Libs|R|cffffffff插件基础函数库|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N再次感谢各位朋友！
-## Title-zhCN:|cffFF4500[核心]|R|cff33ffcc!Libs|R|cffffffff插件基础函数库
-## Notes-zhCN:|cff33ffcc!Libs|R|cffffffff插件基础函数库|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N再次感谢各位朋友！
+## Title: |cffFF4500[核心]|R!Libs |cffcccccc[插件基础函数库]|R
+## Notes: |cffFF4500!Libs|R|N由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N版本：20231220
+## Title-zhCN:|cffFF4500[核心]|R!Libs |cffcccccc[插件基础函数库]|R
+## Notes-zhCN:|cffFF4500!Libs|R|N由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N版本：20231220
 ## X-Repple: 核心
 ## Author: Various，VE、凡人、名字不好起、NineTears(Wind)
 ## Version: 1.1.4

@@ -11,10 +11,10 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2023-12-03
+-- Last update: 2023-12-20
 
 local MAJOR_VERSION = "Babble-Boss-2.2"
-local MINOR_VERSION = 20006
+local MINOR_VERSION = 20007
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 
@@ -452,10 +452,29 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Venom Stalker"] = true,
         ["Living Monstrosity"] = true,
         ["Necro Stalker"] = true,
+        ["Gurubashi Bat Rider"] = true,
+        ["Flesh Hunter"] = true,
+        ["Qiraji Champion"] = true,
+        ["Qiraji Mindslayer"] = true,
+        ["Anubisath Sentinel"] = true,
+        ["Qiraji Brainwasher"] = true,
+        ["Gargoyle"] = true,
+        ["Deathknight Captain"] = true,
+        ["Blackhand Incarcerator"] = true,
+        ["Rookery Hatcher"] = true,
+        ["Rookery Guardian"] = true,
+        ["Solnius"] = true,
+        ["Sanctum Dragonkin"] = true,
+        ["Sanctum Dreamer"] = true,
+        ["Sanctum Supressor"] = true,
+        ["Sanctum Wyrmkin"] = true,
+        ["Sanctum Wyrm"] = true,
+        ["Phantom Servant"] = true,
+        ["Dark Rider Champion"] = true,
 
         -- Wind汉化修复Turtle-WOW-zhCN端
         -- https://github.com/NineTears/Atlas-Turtle-zhCN
-        -- Last update: 2023-12-03
+        -- Last update: 2023-12-20
 
         ["Avalanchion"] = "阿瓦兰奇奥",
         ["The Windreaver"] = "烈风掠夺者",
@@ -876,7 +895,25 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Venom Stalker"] = "毒性捕猎者",
         ["Living Monstrosity"] = "畸形妖",
         ["Necro Stalker"] = "死灵捕猎者",
-
+        ["Gurubashi Bat Rider"] = "觅血者前锋",
+        ["Flesh Hunter"] = "血肉猎手",
+        ["Qiraji Champion"] = "其拉勇士",
+        ["Qiraji Mindslayer"] = "其拉斩灵者",
+        ["Anubisath Sentinel"] = "阿努比萨斯哨兵",
+        ["Qiraji Brainwasher"] = "其拉洗脑者",
+        ["Gargoyle"] = "石像鬼",
+        ["Deathknight Captain"] = "死亡骑士队长",
+        ["Blackhand Incarcerator"] = "黑手监禁者",
+        ["Rookery Hatcher"] = "群居孵化者",
+        ["Rookery Guardian"] = "群居守卫者",
+        ["Solnius"] = "索尔纽斯",
+        ["Sanctum Dragonkin"] = "圣所龙人",
+        ["Sanctum Dreamer"] = "圣所梦游者",
+        ["Sanctum Supressor"] = "圣所压制者",
+        ["Sanctum Wyrmkin"] = "圣所龙族",
+        ["Sanctum Wyrm"] = "圣所巨龙",
+        ["Phantom Servant"] = "幻影仆从",
+        ["Dark Rider Champion"] = "黑暗骑士勇士",
 	}
 end)
 
@@ -1097,9 +1134,8 @@ BabbleBoss:RegisterTranslations("esES", function()
 		["Kurinnaxx"] = "Kurinnaxx",
 		["Ancient Core Hound"] = "Can del Núcleo",
 		["Gurubashi Berserker"] = "Rabioso Gurubashi",
-                ["Elder Mottled Boar"] = "Jabalí jaspeado mayor",
-                ["Stoneskin Gargoyle"] = "Gárgola piel de piedra",
-
+		["Elder Mottled Boar"] = "Jabalí jaspeado mayor",
+		["Stoneskin Gargoyle"] = "Gárgola piel de piedra",
 		["Maur Grimtotem"] = "Maur Tótem Siniestro",
 		["Oggleflint"] = "Ogglesílex",
 		["Taragaman the Hungerer"] = "Taragaman el Hambriento",
@@ -1335,7 +1371,7 @@ BabbleBoss:RegisterTranslations("ruRU", function()
 		["Captain Kromcrush"] = "Капитан Давигром",
 		["Celebras the Cursed"] = "Келебрас Проклятый",
 		["Crystal Fang"] = "Хрустальный Клык",
-                ["Darkmaster Gandling"] = "Темный магистр Гандлинг",
+		["Darkmaster Gandling"] = "Темный магистр Гандлинг",
 		["Doctor Theolen Krastinov"] = "Доктор Теолен Крастинов",
 		["Doom'rel"] = "Рок'рел",
 		["Dope'rel"] = "Праздн'рел",
@@ -1566,8 +1602,8 @@ BabbleBoss:RegisterTranslations("ruRU", function()
 		["Rethilgore"] = "Ретилгор";
 		["Atiesh"] = "Атиеш";
 		["Stratholme Courier"] = "Стратхольмский курьер";
-                ["Elder Mottled Boar"] = "Elder Mottled Boar", -- need translation
-                ["Stoneskin Gargoyle"] = "Stoneskin Gargoyle", -- need translation
+		["Elder Mottled Boar"] = "Elder Mottled Boar", -- need translation
+		["Stoneskin Gargoyle"] = "Stoneskin Gargoyle", -- need translation
 	}
 end)
 
@@ -2429,6 +2465,25 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Venom Stalker"] = "毒性捕猎者",
         ["Living Monstrosity"] = "畸形妖",
         ["Necro Stalker"] = "死灵捕猎者",
+        ["Gurubashi Bat Rider"] = "觅血者前锋",
+        ["Flesh Hunter"] = "血肉猎手",
+        ["Qiraji Champion"] = "其拉勇士",
+        ["Qiraji Mindslayer"] = "其拉斩灵者",
+        ["Anubisath Sentinel"] = "阿努比萨斯哨兵",
+        ["Qiraji Brainwasher"] = "其拉洗脑者",
+        ["Gargoyle"] = "石像鬼",
+        ["Deathknight Captain"] = "死亡骑士队长",
+        ["Blackhand Incarcerator"] = "黑手监禁者",
+        ["Rookery Hatcher"] = "群居孵化者",
+        ["Rookery Guardian"] = "群居守卫者",
+        ["Solnius"] = "索尔纽斯",
+        ["Sanctum Dragonkin"] = "圣所龙人",
+        ["Sanctum Dreamer"] = "圣所梦游者",
+        ["Sanctum Supressor"] = "圣所压制者",
+        ["Sanctum Wyrmkin"] = "圣所龙族",
+        ["Sanctum Wyrm"] = "圣所巨龙",
+        ["Phantom Servant"] = "幻影仆从",
+        ["Dark Rider Champion"] = "黑暗骑士勇士",
 	}
 end)
 

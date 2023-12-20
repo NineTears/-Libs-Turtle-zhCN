@@ -5,7 +5,7 @@
 	Website: http://wiki.wowace.com/index.php/GratuityLib
 	Documentation: http://wiki.wowace.com/index.php/Gratuity-2.0_API_Documentation
 	SVN: svn://svn.wowace.com/root/trunk/GratuityLib/Gratuity-2.0
-	Description: 鼠标提示库
+	Description: Tooltip parsing library（鼠标提示库）
 	Dependencies: AceLibrary, (optional) Compost-2.0, (optional) Deformat-2.0
 ]]
 

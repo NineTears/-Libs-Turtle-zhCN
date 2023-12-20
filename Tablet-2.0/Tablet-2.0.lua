@@ -1,21 +1,36 @@
 --[[
-	Name: Tablet-2.0
-	Revision: $Rev: 17880 $
-	Author(s): ckknight (ckknight@gmail.com)
-	Website: http://ckknight.wowinterface.com/
-	Documentation: http://wiki.wowace.com/index.php/Tablet-2.0
-	SVN: http://svn.wowace.com/root/trunk/TabletLib/Tablet-2.0
-	Description: A library to provide an efficient, featureful tooltip-style display.
-	Dependencies: AceLibrary, (optional) Dewdrop-2.0
+Name: Tablet-2.0
+Revision: $Rev: 17873 $
+Author(s): ckknight (ckknight@gmail.com)
+Website: http://ckknight.wowinterface.com/
+Documentation: http://wiki.wowace.com/index.php/Tablet-2.0
+SVN: http://svn.wowace.com/root/trunk/TabletLib/Tablet-2.0
+Description: A library to provide an efficient, featureful tooltip-style display.
+Dependencies: AceLibrary, (optional) Dewdrop-2.0
 ]]
 
 local MAJOR_VERSION = "Tablet-2.0"
-local MINOR_VERSION = "$Revision: 17880 $"
+local MINOR_VERSION = "$Revision: 17874 $"
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end
 
 local DEBUG = false
+
+
+local SCROLL_UP = "Scroll up"
+local SCROLL_DOWN = "Scroll down"
+local HINT = "Hint"
+local DETACH = "Detach"
+local DETACH_DESC = "Detach the tablet from its source."
+local SIZE = "Size"
+local SIZE_DESC = "Scale the tablet."
+local CLOSE_MENU = "Close menu"
+local CLOSE_MENU_DESC = "Close the menu."
+local COLOR = "Background color"
+local COLOR_DESC = "Set the background color."
+local LOCK = "Lock"
+local LOCK_DESC = "Lock the tablet in its current position. Alt+Right-click for menu or Alt+drag to drag it when locked."
 
 if GetLocale() == "deDE" then
 	SCROLL_UP = "Hochscrollen"
@@ -31,6 +46,20 @@ if GetLocale() == "deDE" then
 	COLOR_DESC = "Hintergrundfarbe setzen."
 	LOCK = "Sperren"
 	LOCK_DESC = "Sperrt die aktuelle Position vom Tooltip. Alt+Rechts-klick f\195\188rs Men\195\188 oder Alt+Verschieben f\195\188rs verschieben wenn es gesperrt ist."
+elseif GetLocale() == "esES" then
+	SCROLL_UP = "Desplazarse hacia arriba"
+	SCROLL_DOWN = "Desplazarse hacia abajo"
+	HINT = "Pista"
+	DETACH = "Separar"
+	DETACH_DESC = "Separa la tableta de su fuente."
+	SIZE = "Tamaño"
+	SIZE_DESC = "Escalar la tableta."
+	CLOSE_MENU = "Cerrar menú"
+	CLOSE_MENU_DESC = "Cerra el menú."
+	COLOR = "Color del fondo"
+	COLOR_DESC = "Define el color del fondo."
+	LOCK = "Bloquear"
+	LOCK_DESC = "Bloquea la tableta a su posición actual. Alt+Clic-Derecho para el menú o Alt+Arrastrar para arrastrarlo cuando esté bloqueado."
 elseif  GetLocale() == "ruRU" then
 	SCROLL_UP = "Прокрутка вверх"
 	SCROLL_DOWN = "Прокрутка вниз"
@@ -101,20 +130,6 @@ elseif GetLocale() == "frFR" then
 	COLOR_DESC = "Permet de d\195\169finir la couleur du fond."
 	LOCK = "Bloquer"
 	LOCK_DESC = "Bloque le tableau \195\160 sa position actuelle. Alt+clic-droit pour le menu ou Alt+glisser pour le d\195\169placer quand il est bloqu\195\169."
-else
-	SCROLL_UP = "Scroll up"
-	SCROLL_DOWN = "Scroll down"
-	HINT = "Hint"
-	DETACH = "Detach"
-	DETACH_DESC = "Detach the tablet from its source."
-	SIZE = "Size"
-	SIZE_DESC = "Scale the tablet."
-	CLOSE_MENU = "Close menu"
-	CLOSE_MENU_DESC = "Close the menu."
-	COLOR = "Background color"
-	COLOR_DESC = "Set the background color."
-	LOCK = "Lock"
-	LOCK_DESC = "Lock the tablet in its current position. Alt+Right-click for menu or Alt+drag to drag it when locked."
 end
 
 local start = GetTime()

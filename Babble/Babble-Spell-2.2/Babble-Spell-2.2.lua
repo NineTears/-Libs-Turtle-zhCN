@@ -11,7 +11,7 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2023-12-03
+-- Last update: 2023-12-20
 
 local MAJOR_VERSION = "Babble-Spell-2.2"
 local MINOR_VERSION = tonumber(string.sub("$Revision: 25189 $", 12, -3))
@@ -1459,7 +1459,7 @@ BabbleSpell:RegisterTranslations("enUS", function()
 
         -- Wind汉化修复Turtle-WOW中文数据
         -- https://github.com/NineTears/Libs-Turtle-zhCN
-        -- Last update: 2023-12-03
+        -- Last update: 2023-12-20
         
 		["Abolish Disease"] = "驱除疾病",
         ["Abolish Poison Effect"] = "驱毒术效果",

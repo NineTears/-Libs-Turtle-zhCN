@@ -11,10 +11,10 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2023-12-03
+-- Last update: 2023-12-20
 
 local MAJOR_VERSION = "Babble-Zone-2.2"
-local MINOR_VERSION = tonumber(string.sub("$Revision: 17779 $", 12, -3))
+local MINOR_VERSION = tonumber(string.sub("$Revision: 17780 $", 12, -3))
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 
@@ -209,9 +209,9 @@ BabbleZone:RegisterTranslations("enUS", function()
 
         -- Wind汉化修复Turtle-WOW-zhCN端
         -- https://github.com/NineTears/Atlas-Turtle-zhCN
-        -- Last update: 2023-12-03
+        -- Last update: 2023-12-20
 
-		["Ahn'Qiraj"] = "安其拉",
+		["Ahn'Qiraj"] = "|CFFFF0000[团队]|R 安其拉神殿",
 		["Alah'Thalas"] = "阿尔萨拉斯", --TurtleWOW
 		["Alterac Mountains"] = "奥特兰克山脉",
 		["Alterac Valley"] = "奥特兰克山谷",
@@ -250,7 +250,7 @@ BabbleZone:RegisterTranslations("enUS", function()
 		["Eastern Kingdoms"] = "东部王国",
 		["Eastern Plaguelands"] = "东瘟疫之地",
 		["Elwynn Forest"] = "艾尔文森林",
-		["Emerald Sanctum"] = "|CFFFF0000[团队] |CFF00FF00翡翠圣境", -- TurtleWOW
+		["Emerald Sanctum"] = "|CFFFF0000[团队]|R |CFF00FF00翡翠圣境", -- TurtleWOW
 		["Everlook"] = "永望镇",
 		["Felwood"] = "费伍德森林",
 		["Feralas"] = "菲拉斯",
@@ -273,7 +273,7 @@ BabbleZone:RegisterTranslations("enUS", function()
 		["Karazhan Crypt"] = "[58-60] |CFF00FF00卡拉赞地穴", -- TurtleWOW
 		["Loch Modan"] = "洛克莫丹",
 		["Lower Blackrock Spire"] = "[55-60] 黑石塔下层",
-		["Lower Karazhan Halls"] = "|CFFFF0000[团队] |CFF00FF00卡拉赞下层大厅", -- TurtleWOW
+		["Lower Karazhan Halls"] = "|CFFFF0000[团队]|R |CFF00FF00卡拉赞下层大厅", -- TurtleWOW
 		["Maraudon"] = "[45-55] 玛拉顿",
 		["Menethil Harbor"] = "米奈希尔港",
 		["Molten Core"] = "|CFFFF0000[团队]|R 熔火之心",
@@ -987,7 +987,7 @@ end)
 
 BabbleZone:RegisterTranslations("zhCN", function()
 	return {
-		["Ahn'Qiraj"] = "安其拉",
+		["Ahn'Qiraj"] = "|CFFFF0000[团队]|R 安其拉神殿",
 		["Alah'Thalas"] = "阿尔萨拉斯", --TurtleWOW
 		["Alterac Mountains"] = "奥特兰克山脉",
 		["Alterac Valley"] = "奥特兰克山谷",
