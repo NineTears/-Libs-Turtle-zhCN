@@ -1,4 +1,8 @@
-local lib ={}
+local MAJOR_VERSION = "LibMobHealthCache-1.0"
+local MINOR_VERSION = 10000 + tonumber(string.match("$Revision: 1 $", "%d+"))
+
+local lib = LibStub:NewLibrary(MAJOR_VERSION, MINOR_VERSION)
+if not lib then return end
 
 lib.Health_Cache = {
 	["PvP ALT-N 荣誉记分员:1"] = 64,

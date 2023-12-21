@@ -1,4 +1,8 @@
-local lib ={}
+local MAJOR_VERSION = "LibItem-enUS-1.0"
+local MINOR_VERSION = 10000 + tonumber(string.match("$Revision: 1 $", "%d+"))
+
+local lib = LibStub:NewLibrary(MAJOR_VERSION, MINOR_VERSION)
+if not lib then return end
 
 lib.Item_enUS = {
 	[16384] = "Grimoire of Tainted Blood (Rank 1)",
@@ -14882,5 +14886,5 @@ lib.Item_enUS = {
 	[16382] = "Grimoire of Devour Magic (Rank 3)",
 	[16383] = "Grimoire of Devour Magic (Rank 4)",
 }
-
+LibitemData_enUS = lib.Item_enUS
 LibItem_enUS = lib.Item_enUS
