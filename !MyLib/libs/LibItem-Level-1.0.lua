@@ -15442,4 +15442,5 @@ lib.Item_Level = {
 }
 
 LID_Level  = lib
+LIDL  = lib
 LibItem_Level = lib.Item_Level
