@@ -15445,6 +15445,22 @@ lib.Item_Level = {
 [92000]=1,
 }
 
-LID_Level  = lib
-LIDL  = lib
-LibItem_Level = lib.Item_Level
+local function deepcopy(orig)
+    local orig_type = type(orig)
+    local copy
+    if orig_type == 'table' then
+        copy = {}
+        for orig_key, orig_value in next, orig, nil do
+            copy[deepcopy(orig_key)] = deepcopy(orig_value)
+        end
+        setmetatable(copy, deepcopy(getmetatable(orig)))
+    else -- 非table类型则直接拷贝
+        copy = orig
+    end
+    return copy
+end
+
+-- 克隆并赋值给新table
+LID_Level = deepcopy(lib)
+LIDL = deepcopy(lib)
+LibItem_Level = deepcopy(lib.Item_Level)

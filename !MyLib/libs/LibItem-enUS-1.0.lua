@@ -14886,5 +14886,22 @@ lib.Item_enUS = {
 	[16382] = "Grimoire of Devour Magic (Rank 3)",
 	[16383] = "Grimoire of Devour Magic (Rank 4)",
 }
-LibitemData_enUS = lib.Item_enUS
-LibItem_enUS = lib.Item_enUS
+
+local function deepcopy(orig)
+    local orig_type = type(orig)
+    local copy
+    if orig_type == 'table' then
+        copy = {}
+        for orig_key, orig_value in next, orig, nil do
+            copy[deepcopy(orig_key)] = deepcopy(orig_value)
+        end
+        setmetatable(copy, deepcopy(getmetatable(orig)))
+    else -- 非table类型则直接拷贝
+        copy = orig
+    end
+    return copy
+end
+
+-- 克隆并赋值给新table
+LibitemData_enUS = deepcopy(lib.Item_enUS)
+LibItem_enUS = deepcopy(lib.Item_enUS)

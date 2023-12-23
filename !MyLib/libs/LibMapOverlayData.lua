@@ -39,6 +39,23 @@ MapOverlayData = {
     ["Silithus"] = {"THESCARABWALL:288:256:116:413", "THECRYSTALVALE:320:289:104:24", "HIVEASHI:512:320:265:12", "SOUTHWINDVILLAGE:384:384:500:65", "TWILIGHTBASECAMP:320:256:344:197", "HIVEZORA:384:512:97:144", "HIVEREGAL:512:384:245:285",},
     ["DeadwindPass"] = {"THEVICE:270:270:426:299", "KARAZHAN:300:245:269:337", "DEADMANSCROSSING:380:365:249:76",},
     ["AlteracValley"] = {"DUNBALDAR:270:240:348:13", "ICEBLOODGARRISON:300:300:335:172",},
-    ["Moonglade"] = { "LAKEELUNEARA:555:510:244:89", }}
+    ["Moonglade"] = { "LAKEELUNEARA:555:510:244:89", }
+}
 
-    LibMapOverlayData = MapOverlayData
+local function deepcopy(orig)
+    local orig_type = type(orig)
+    local copy
+    if orig_type == 'table' then
+        copy = {}
+        for orig_key, orig_value in next, orig, nil do
+            copy[deepcopy(orig_key)] = deepcopy(orig_value)
+        end
+        setmetatable(copy, deepcopy(getmetatable(orig)))
+    else -- 非table类型则直接拷贝
+        copy = orig
+    end
+    return copy
+end
+
+-- 克隆并赋值给新table
+LibMapOverlayData = deepcopy(MapOverlayData)
