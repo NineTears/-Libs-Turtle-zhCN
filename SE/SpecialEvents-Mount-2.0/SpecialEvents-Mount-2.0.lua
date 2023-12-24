@@ -31,15 +31,15 @@ function activate(self, oldLib, oldDeactivate)
 end
 
 local Mount_List = {
-	"_mount_",						--常规坐骑
-	"spell_nature_swiftness",		--骸骨军马、机械陆行鸟、科多兽、地狱战马、迅猛龙等
-	"_qirajicrystal_",				--其拉共鸣水晶
+	"_mount_",						-- 常规坐骑
+	"spell_nature_swiftness",		-- 骸骨军马、机械陆行鸟、科多兽、地狱战马、迅猛龙等
+	"_qirajicrystal_",				-- 其拉共鸣水晶
 	
 	--------特殊坐骑请玩家前往小地图 Automaton-下马-增加坐骑 功能中添加--------
-	"hunter_pet_turtle", 			--乌龟坐骑 
-	"warstomp", 					--斑马坐骑 
-	"bullrush", 					--幽灵狮鹫
-	"_branch_", 					--驯鹿
+	"hunter_pet_turtle", 			-- 乌龟坐骑 
+	"warstomp", 					-- 斑马坐骑 
+	"bullrush", 					-- 幽灵狮鹫
+	"_branch_", 					-- 驯鹿
 	"ability_racial_bearform",
 	"ability_druid_catform",
 	"ability_druid_travelform",
@@ -52,6 +52,8 @@ local Mount_List = {
 	"zuoqi",
 	"inv_misc_head_dragon_black",
 	"ability_bullrush",
+	"Spell_Nature_WispSplode",
+	"inv_misc_branch_01",
 }
 
 function lib:PLAYER_AURAS_CHANGED()
