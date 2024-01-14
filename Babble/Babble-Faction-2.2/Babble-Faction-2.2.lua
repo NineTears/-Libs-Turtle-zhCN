@@ -77,7 +77,7 @@ BabbleFaction:RegisterTranslations("enUS", function()
 	["Exalted"] = true,
 
 	-- Wind汉化修复Turtle-WOW-zhCN端
-	-- https://github.com/NineTears/Atlas-Turtle-zhCN
+	-- https://github.com/NineTears/Libs-Turtle-zhCN
 	-- Last update: 2023-12-03
 
 	-- Player Factions

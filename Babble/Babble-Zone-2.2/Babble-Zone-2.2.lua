@@ -214,7 +214,7 @@ BabbleZone:RegisterTranslations("enUS", function()
 
 
         -- Wind汉化修复Turtle-WOW-zhCN端
-        -- https://github.com/NineTears/Atlas-Turtle-zhCN
+        -- https://github.com/NineTears/Libs-Turtle-zhCN
         -- Last update: 2023-12-21
 		["Ahn'Qiraj"] = "安其拉",
 		["Alah'Thalas"] = "阿尔萨拉斯", --TurtleWOW

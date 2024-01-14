@@ -471,9 +471,10 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Sanctum Wyrm"] = true,
         ["Phantom Servant"] = true,
         ["Dark Rider Champion"] = true,
+        ["Hive'Zara Soldier"] = true,
 
         -- Wind汉化修复Turtle-WOW-zhCN端
-        -- https://github.com/NineTears/Atlas-Turtle-zhCN
+        -- https://github.com/NineTears/Libs-Turtle-zhCN
         -- Last update: 2023-12-20
 
         ["Avalanchion"] = "阿瓦兰奇奥",
@@ -914,6 +915,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Sanctum Wyrm"] = "圣所巨龙",
         ["Phantom Servant"] = "幻影仆从",
         ["Dark Rider Champion"] = "黑暗骑士勇士",
+        ["Hive'Zara Soldier"] = "佐拉士兵",
 	}
 end)
 
@@ -2484,6 +2486,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Sanctum Wyrm"] = "圣所巨龙",
         ["Phantom Servant"] = "幻影仆从",
         ["Dark Rider Champion"] = "黑暗骑士勇士",
+        ["Hive'Zara Soldier"] = "佐拉士兵",
 	}
 end)
 
