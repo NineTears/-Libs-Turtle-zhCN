@@ -62,3 +62,4 @@ end
 
 -- 克隆并赋值给新table
 LibMapOverlayData = deepcopy(MapOverlayData)
+zMapOverlayData = deepcopy(MapOverlayData)
