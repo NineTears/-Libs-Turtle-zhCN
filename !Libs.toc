@@ -1,16 +1,16 @@
 ## Interface: 11200
-## Title: |cffFF4500!Libs-|RTurtle |cffff1450[红星1.24]|R
-## Title-zhCN:|cffFF4500!Libs-|RTurtle |cffff1450[红星1.24]|R
-## Notes: |cffFF4500!Libs-|RTurtle |cffff1450[红星1.24]|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N本插件完全免费，请勿在第三方购买！
-## Notes-zhCN:|cffFF4500!Libs-|RTurtle |cffff1450[红星1.24]|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N本插件完全免费，请勿在第三方购买！
+## Title: |cffFF4500!Libs-|RTurtle |cffff1450[红星1.25]|R
+## Title-zhCN:|cffFF4500!Libs-|RTurtle |cffff1450[红星1.25]|R
+## Notes: |cffFF4500!Libs-|RTurtle |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N本插件完全免费，请勿在第三方购买！
+## Notes-zhCN:|cffFF4500!Libs-|RTurtle |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N本插件完全免费，请勿在第三方购买！
 ## X-Repple: 核心
 ## Author: Various，VE，凡人，名字不好起，NineTears(Wind)
-## Version: 1.24
+## Version: 1.0.3
 ## OptionalDeps: Warmup, BugGrabber
 ## X-Category: Library
 
 !MyLib\api\api.xml
-## UnitAura\UnitAura.xml
+!MyLib\libs\libs.xml
 
 Ace\Ace.xml
 Ace\Locale\AceLocals.lua
@@ -54,17 +54,18 @@ SE\SpecialEvents-LearnSpell-2.0\SpecialEvents-LearnSpell-2.0.lua
 SE\SpecialEvents-Mount-2.0\SpecialEvents-Mount-2.0.lua
 SE\SpecialEvents-Movement-2.0\SpecialEvents-Movement-2.0.lua
 
-Babble\Babble-Boss-2.2\Babble-Boss-2.2.lua
-Babble\Babble-Class-2.2\Babble-Class-2.2.lua
-Babble\Babble-Faction-2.2\Babble-Faction-2.2.lua
-Babble\Babble-ItemSet-2.2\Babble-ItemSet-2.2.lua
-Babble\Babble-Spell-2.2\Babble-Spell-2.2.lua
 Babble\Babble-SpellTree-2.2\Babble-SpellTree-2.2.lua
 Babble\Babble-Zone-2.2\Babble-Zone-2.2.lua
 Babble\Babble-Zone-2.3\Babble-Zone-2.3.lua
+Babble\Babble-Boss-2.2\Babble-Boss-2.2.lua
+Babble\Babble-Class-2.2\Babble-Class-2.2.lua
+Babble\Babble-Spell-2.2\Babble-Spell-2.2.lua
+Babble\Babble-Faction-2.2\Babble-Faction-2.2.lua
+Babble\Babble-ItemSet-2.2\Babble-ItemSet-2.2.lua
+
 
 PT\Core\PTEmbed.lua
-PT\TradeSkills\PTTradeskillsEmbed.lua
+PT\Tradeskills\PTTradeskillsEmbed.lua
 PT\Elements\Misc\PTEmbedElemMisc.lua
 PT\Elements\EquipSets\PTEmbedElemEquipSets.lua
 PT\Elements\Food\PTEmbedElemFood.lua
@@ -85,6 +86,7 @@ Banzai-1.0\Banzai-1.0.lua
 Abacus-2.0\Abacus-2.0.lua
 Tourist-2.0\Tourist-2.0.lua
 PaintChips-2.0\PaintChips-2.0.lua
+CandyBar-2.0\CandyBar-2.0.lua
 CandyBar-2.1\CandyBar-2.1.lua
 SpellCache-1.0\SpellCache-1.0.lua
 SpellStatus-1.0\SpellStatus-1.0.lua
@@ -103,3 +105,5 @@ CastLib-1.0\CastLib-1.0.lua
 EnhTooltip\Stubby.xml
 EnhTooltip\TinyMoneyFrame.xml
 EnhTooltip\Tooltip.xml
+
+MyTexture\skin.lua
