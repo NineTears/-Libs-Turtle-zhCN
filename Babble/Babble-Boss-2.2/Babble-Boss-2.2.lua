@@ -11,7 +11,7 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2023-12-20
+-- Last update: 2024-02-08
 
 local MAJOR_VERSION = "Babble-Boss-2.2"
 local MINOR_VERSION = 20007
@@ -475,7 +475,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
 
         -- Wind汉化修复Turtle-WOW-zhCN端
         -- https://github.com/NineTears/Libs-Turtle-zhCN
-        -- Last update: 2023-12-20
+        -- Last update: 2024-02-08
 
         ["Avalanchion"] = "阿瓦兰奇奥",
         ["The Windreaver"] = "烈风掠夺者",
@@ -496,8 +496,8 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Gothik the Harvester"] = "收割者戈提克",
         ["Highlord Mograine"] = "大领主莫格莱尼",
         ["Thane Korth'azz"] = "库尔塔兹领主",
-        ["Lady Blaumeux"] = "女公爵布洛莫斯",
-        ["Sir Zeliek"] = "札里克爵士",
+        ["Lady Blaumeux"] = "女公爵布劳缪克丝",
+        ["Sir Zeliek"] = "瑟里耶克爵士",
         ["The Four Horsemen"] = "四骑士",
         ["Noth the Plaguebringer"] = "瘟疫者诺斯",
         ["Heigan the Unclean"] = "肮脏者海根",
@@ -744,7 +744,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Time-Lord Epochronos"] = "时间领主伊波克洛诺斯",
         ["Mossheart"] = "莫斯哈特",
         ["Rotmaw"] = "腐烂之喉",
-        ["Antnormi"] = "安蒂诺米",
+        ["Antnormi"] = "安特诺米",
         ["Infinite Chromie"] = "无限克罗米",
         -- StormwindVault TurtleWOW
         ["Aszosh Grimflame"] = "艾丝卓仕·格瑞姆弗雷姆",
@@ -893,7 +893,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
 
         -- 兼容Bigwigs增加怪物
         ["Death Talon Wyrmguard"] = "黑翼龙人护卫",
-        ["Venom Stalker"] = "毒性捕猎者",
+        ["Venom Stalker"] = "毒液捕猎者",
         ["Living Monstrosity"] = "畸形妖",
         ["Necro Stalker"] = "死灵捕猎者",
         ["Gurubashi Bat Rider"] = "觅血者前锋",
@@ -2067,8 +2067,8 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Gothik the Harvester"] = "收割者戈提克",
         ["Highlord Mograine"] = "大领主莫格莱尼",
         ["Thane Korth'azz"] = "库尔塔兹领主",
-        ["Lady Blaumeux"] = "女公爵布洛莫斯",
-        ["Sir Zeliek"] = "札里克爵士",
+        ["Lady Blaumeux"] = "女公爵布劳缪克丝",
+        ["Sir Zeliek"] = "瑟里耶克爵士",
         ["The Four Horsemen"] = "四骑士",
         ["Noth the Plaguebringer"] = "瘟疫者诺斯",
         ["Heigan the Unclean"] = "肮脏者海根",
@@ -2315,7 +2315,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Time-Lord Epochronos"] = "时间领主伊波克洛诺斯",
         ["Mossheart"] = "莫斯哈特",
         ["Rotmaw"] = "腐烂之喉",
-        ["Antnormi"] = "安蒂诺米",
+        ["Antnormi"] = "安特诺米",
         ["Infinite Chromie"] = "无限克罗米",
         -- StormwindVault TurtleWOW
         ["Aszosh Grimflame"] = "艾丝卓仕·格瑞姆弗雷姆",
@@ -2464,7 +2464,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
 
         -- 兼容Bigwigs增加怪物
         ["Death Talon Wyrmguard"] = "黑翼龙人护卫",
-        ["Venom Stalker"] = "毒性捕猎者",
+        ["Venom Stalker"] = "毒液捕猎者",
         ["Living Monstrosity"] = "畸形妖",
         ["Necro Stalker"] = "死灵捕猎者",
         ["Gurubashi Bat Rider"] = "觅血者前锋",
