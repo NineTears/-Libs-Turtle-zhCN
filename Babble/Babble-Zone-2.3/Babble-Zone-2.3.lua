@@ -227,8 +227,8 @@ BabbleZone:RegisterTranslations("enUS", function()
 		["Azshara"] = "艾萨拉",
 		["Badlands"] = "荒芜之地",
 		["The Barrens"] = "贫瘠之地",
-		["The Black Morass"] = "时光之穴:黑色沼泽", --TurtleWOW
-		["Black Morass"] = "时光之穴:黑色沼泽", -- TurtleWOW
+		["The Black Morass"] = "黑色沼泽", --TurtleWOW
+		["Black Morass"] = "黑色沼泽", -- TurtleWOW
 		["Blackfathom Deeps"] = "黑暗深渊",
 		["Blackrock Depths"] = "黑石深渊",
 		["Blackrock Mountain"] = "黑石山",
@@ -1008,8 +1008,8 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Azshara"] = "艾萨拉",
 		["Badlands"] = "荒芜之地",
 		["The Barrens"] = "贫瘠之地",
-		["The Black Morass"] = "时光之穴:黑色沼泽", --TurtleWOW
-		["Black Morass"] = "时光之穴:黑色沼泽", -- TurtleWOW
+		["The Black Morass"] = "黑色沼泽", --TurtleWOW
+		["Black Morass"] = "黑色沼泽", -- TurtleWOW
 		["Blackfathom Deeps"] = "黑暗深渊",
 		["Blackrock Depths"] = "黑石深渊",
 		["Blackrock Mountain"] = "黑石山",
