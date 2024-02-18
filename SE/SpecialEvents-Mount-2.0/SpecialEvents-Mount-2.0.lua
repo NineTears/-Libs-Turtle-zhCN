@@ -54,6 +54,10 @@ local Mount_List = {
 	"ability_bullrush",
 	"Spell_Nature_WispSplode",
 	"inv_misc_branch_01",
+    "Spell_Nature_Swiftness",  --粉色羊
+    "INV_ValentinesBoxOfChocolates02",  --粉色马
+    "INV_ValentinesCard01",   --粉色虎
+    "ability_hunter_pet_dragonhawk",  --龙鹰
 }
 
 function lib:PLAYER_AURAS_CHANGED()
