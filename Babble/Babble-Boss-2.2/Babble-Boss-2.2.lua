@@ -88,6 +88,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		-- TurtleWOW
 		["Turtlhu"] = true,
 		["Nerubian"] = true,
+		["Nerubian Overseer"] = true,
 		["Reaver"] = true,
 		["Ostarius"] = true,
 		["Concavius"] = true,
@@ -533,7 +534,8 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Lethon"] = "雷索",
         -- TurtleWOW
         ["Turtlhu"] = "胡龟之子",
-        ["Nerubian"] = "蛛魔",
+        ["Nerubian"] = "蛛怪",
+        ["Nerubian Overseer"] = "蛛怪监工",
         ["Reaver"] = "掠夺者",
         ["Ostarius"] = "奥兹塔里亚斯",
         ["Concavius"] = "空卡维斯",
@@ -2106,6 +2108,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         -- TurtleWOW
         ["Turtlhu"] = "胡龟之子",
         ["Nerubian"] = "蛛魔",
+        ["Nerubian Overseer"] = "蛛怪监工",
         ["Reaver"] = "掠夺者",
         ["Ostarius"] = "奥兹塔里亚斯",
         ["Concavius"] = "空卡维斯",
