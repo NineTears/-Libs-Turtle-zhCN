@@ -93,6 +93,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		["Concavius"] = true,
 		["Dark Reaver of Karazhan"] = true,
 		----------------------
+		["Twilight Corrupter"] = true,
 		["High Priestess Jeklik"] = true,
 		["High Priest Venoxis"] = true,
 		["High Priest Thekal"] = true,
@@ -538,6 +539,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Concavius"] = "空卡维斯",
         ["Dark Reaver of Karazhan"] = "卡拉赞黑暗掠夺者",
         ----------------------
+        ["Twilight Corrupter"] = "暮光腐蚀者",
         ["High Priestess Jeklik"] = "高阶祭司耶克里克",
         ["High Priest Venoxis"] = "高阶祭司温诺希斯",
         ["High Priest Thekal"] = "高阶祭司塞卡尔",
@@ -2109,6 +2111,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Concavius"] = "空卡维斯",
         ["Dark Reaver of Karazhan"] = "卡拉赞黑暗掠夺者",
         ----------------------
+        ["Twilight Corrupter"] = "暮光腐蚀者",
         ["High Priestess Jeklik"] = "高阶祭司耶克里克",
         ["High Priest Venoxis"] = "高阶祭司温诺希斯",
         ["High Priest Thekal"] = "高阶祭司塞卡尔",
