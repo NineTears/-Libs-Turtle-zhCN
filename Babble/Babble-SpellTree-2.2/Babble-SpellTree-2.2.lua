@@ -11,7 +11,7 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2023-12-03
+-- Last update: 2024-02-29
 
 local MAJOR_VERSION = "Babble-SpellTree-2.2"
 local MINOR_VERSION = tonumber(string.sub("$Revision: 14410 $", 12, -3))
@@ -68,47 +68,6 @@ BabbleSpellTree:RegisterTranslations("enUS", function()
 		["Affliction"] = true,
 		["Demonology"] = true,
 		["Destruction"] = true,
-
-		-- Wind汉化修复Turtle-WOW中文数据
-		-- https://github.com/NineTears/Libs-Turtle-zhCN
-		-- Last update: 2023-12-03
-		
-		-- Druid
-		["Balance"] = "平衡",
-		["Feral Combat"] = "野性战斗",
-		["Restoration"] = "恢复",
-		-- Hunter
-		["Beast Mastery"] = "野兽掌握",
-		["Marksmanship"] = "射击",
-		["Survival"] = "生存",
-		-- Mage
-		["Arcane"] = "奥术",
-		["Fire"] = "火焰",
-		["Frost"] = "冰霜",
-		-- Paladin
-		["Holy"] = "神圣",
-		["Protection"] = "防护",
-		["Retribution"] = "惩戒",
-		-- Priest
-		["Discipline"] = "戒律",
-		-- ["Holy"] = "神圣", -- same as Paladin
-		["Shadow"] = "暗影",
-		-- Rogue
-		["Assassination"] = "刺杀",
-		["Combat"] = "战斗",
-		["Subtlety"] = "敏锐",
-		-- Shaman
-		["Elemental"] = "元素战斗",
-		["Enhancement"] = "增强",
-		-- ["Restoration"] = "恢复", -- same as Druid
-		-- Warrior
-		["Arms"] = "武器",
-		["Fury"] = "狂怒",
-		-- ["Protection"] = "防护", -- same as Paladin
-		-- Warlock
-		["Affliction"] = "痛苦",
-		["Demonology"] = "恶魔学识",
-		["Destruction"] = "毁灭",
 	}
 end)
 
