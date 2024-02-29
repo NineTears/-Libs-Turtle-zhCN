@@ -11,7 +11,7 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2024-02-29
+-- Last update: 2023-12-21
 
 local MAJOR_VERSION = "Babble-Zone-2.2"
 local MINOR_VERSION = tonumber(string.sub("$Revision: 17780 $", 12, -3))
@@ -211,6 +211,190 @@ BabbleZone:RegisterTranslations("enUS", function()
 		["Outdoor Raid Bosses"] = true,
 		["Outdoor Raid Bosses Zone"] = true,
 		["Battlegrounds"] = true,
+
+
+        -- Wind汉化修复Turtle-WOW-zhCN端
+        -- https://github.com/NineTears/Libs-Turtle-zhCN
+        -- Last update: 2023-12-21
+		["Ahn'Qiraj"] = "安其拉",
+		["Alah'Thalas"] = "阿尔萨拉斯", --TurtleWOW
+		["Alterac Mountains"] = "奥特兰克山脉",
+		["Alterac Valley"] = "奥特兰克山谷",
+		["Arathi Basin"] = "阿拉希盆地",
+		["Arathi Highlands"] = "阿拉希高地",
+		["Ashenvale"] = "灰谷",
+		["Auberdine"] = "奥伯丁",
+		["Azshara"] = "艾萨拉",
+		["Badlands"] = "荒芜之地",
+		["The Barrens"] = "贫瘠之地",
+		["The Black Morass"] = "黑色沼泽", --TurtleWOW
+		["Black Morass"] = "黑色沼泽", -- TurtleWOW
+		["Blackfathom Deeps"] = "黑暗深渊",
+		["Blackrock Depths"] = "黑石深渊",
+		["Blackrock Mountain"] = "黑石山",
+		["Blackrock Spire"] = "黑石塔",
+		["Blackwing Lair"] = "黑翼之巢",
+		["Blasted Lands"] = "诅咒之地",
+		["Booty Bay"] = "藏宝海湾",
+		["Burning Steppes"] = "燃烧平原",
+		["The Crescent Grove"] = "新月林地", -- TurtleWOW
+		["Darkshore"] = "黑海岸",
+		["Darnassus"] = "达纳苏斯",
+		["The Deadmines"] = "死亡矿井",
+		["Deadwind Pass"] = "逆风小径",
+		["Deeprun Tram"] = "矿道地铁",
+		["Desolace"] = "凄凉之地",
+		["Dire Maul"] = "厄运之槌",
+		["Dire Maul (East)"] = "厄运之槌 (东)",
+		["Dire Maul (West)"] = "厄运之槌 (西)",
+		["Dire Maul (North)"] = "厄运之槌 (北)",
+		["Dun Morogh"] = "丹莫罗",
+		["Durotar"] = "杜隆塔尔",
+		["Duskwood"] = "暮色森林",
+		["Dustwallow Marsh"] = "尘泥沼泽",
+		["Eastern Kingdoms"] = "东部王国",
+		["Eastern Plaguelands"] = "东瘟疫之地",
+		["Elwynn Forest"] = "艾尔文森林",
+		["Emerald Sanctum"] = "翡翠圣境", -- TurtleWOW
+		["Everlook"] = "永望镇",
+		["Felwood"] = "费伍德森林",
+		["Feralas"] = "菲拉斯",
+		["The Forbidding Sea"] = "禁忌之海",
+		["Gadgetzan"] = "加基森",
+		["Gates of Ahn'Qiraj"] = "安其拉之门",
+		["Gilneas"] = "吉尔尼斯", --TurtleWOW
+		["Gilneas City"] = "吉尔尼斯城", --TurtleWOW
+		["Gnomeregan"] = "诺莫瑞根",
+		["The Great Sea"] = "无尽之海",
+		["Grom'gol Base Camp"] = "格罗姆高营地",
+		["Hall of Legends"] = "传说大厅",
+		["Hateforge Quarry"] = "仇恨熔炉采掘场", -- TurtleWOW
+		["Hillsbrad Foothills"] = "希尔斯布莱德丘陵",
+		["The Hinterlands"] = "辛特兰",
+		["Hyjal"] = "海加尔山",
+		["Ironforge"] = "铁炉堡",
+		["Kalimdor"] = "卡利姆多",
+		["Karazhan"] = "卡拉赞", -- TurtleWOW
+		["Karazhan Crypt"] = "卡拉赞地穴", -- TurtleWOW
+		["Loch Modan"] = "洛克莫丹",
+		["Lower Blackrock Spire"] = "黑石塔下层",
+		["Lower Karazhan Halls"] = "卡拉赞下层大厅", -- TurtleWOW
+		["Maraudon"] = "玛拉顿",
+		["Menethil Harbor"] = "米奈希尔港",
+		["Molten Core"] = "熔火之心",
+		["Moonglade"] = "月光林地",
+		["Mulgore"] = "莫高雷",
+		["Naxxramas"] = "纳克萨玛斯",
+		["Onyxia's Lair"] = "奥妮克希亚的巢穴",
+		["Orgrimmar"] = "奥格瑞玛",
+		["Ratchet"] = "棘齿城",
+		["Ragefire Chasm"] = "怒焰裂谷",
+		["Razorfen Downs"] = "剃刀高地",
+		["Razorfen Kraul"] = "剃刀沼泽",
+		["Redridge Mountains"] = "赤脊山",
+		["Ruins of Ahn'Qiraj"] = "安其拉废墟",
+		["Scarlet Monastery"] = "血色修道院",
+		["Scarlet Monastery Cathedral"] = "血色修道院 (大教堂)", -- TurtleWOW
+		["Scarlet Monastery Armory"] = "血色修道院 (军械库)", -- TurtleWOW
+		["Scarlet Monastery Library"] = "血色修道院 (图书馆)", -- TurtleWOW
+		["Scarlet Monastery Graveyard"] = "血色修道院 (墓地)", -- TurtleWOW
+		["Scholomance"] = "通灵学院",
+		["Searing Gorge"] = "灼热峡谷",
+		["Shadowfang Keep"] = "影牙城堡",
+		["Silithus"] = "希利苏斯",
+		["Silverpine Forest"] = "银松森林",
+		["The Stockade"] = "监狱",
+		["Stonetalon Mountains"] = "石爪山脉",
+		["Stormwind City"] = "暴风城",
+		["Stormwind Vault"] = "暴风城宝库", -- TurtleWOW
+		["Stranglethorn Vale"] = "荆棘谷",
+		["Stratholme"] = "斯坦索姆",
+		["Swamp of Sorrows"] = "悲伤沼泽",
+		["Tanaris"] = "塔纳利斯",
+		["Teldrassil"] = "泰达希尔",
+		["Temple of Ahn'Qiraj"] = "安其拉神殿",
+		["The Temple of Atal'Hakkar"] = "阿塔哈卡神庙",
+		["Theramore Isle"] = "塞拉摩岛",
+		["Thousand Needles"] = "千针石林",
+		["Thunder Bluff"] = "雷霆崖",
+		["Tirisfal Glades"] = "提瑞斯法林地",
+		["Uldaman"] = "[40-51] 奥达曼",
+		["Un'Goro Crater"] = "安戈洛环形山",
+		["Undercity"] = "幽暗城",
+		["Upper Blackrock Spire"] = "黑石塔上层",
+		["Wailing Caverns"] = "哀嚎洞穴",
+		["Warsong Gulch"] = "战歌峡谷",
+		["Western Plaguelands"] = "西瘟疫之地",
+		["Westfall"] = "西部荒野",
+		["Wetlands"] = "湿地",
+		["Winterspring"] = "冬泉谷",
+		["Zul'Farrak"] = "祖尔法拉克",
+		["Zul'Gurub"] = "祖尔格拉布",
+		
+		-- Turtle WoW
+		["Amani'alor"] = "阿曼尼岗哨", -- TurtleWOW
+		["Crescent Grove"] = "新月林地", -- TurtleWOW
+		["Gillijim's Isle"] = "吉利吉姆之岛", -- TurtleWOW
+		["Icepoint Rock"] = "冰原岩", -- TurtleWOW
+		["Lapidis Isle"] = "拉匹迪斯之岛", -- TurtleWOW
+		["Moomoo Grove"] = "莫莫树林", -- TurtleWOW
+		["Scarlet Enclave"] = "东瘟疫之地：血色领地", -- TurtleWOW
+		["Sunnyglade Valley"] = "阳光林地山谷", -- TurtleWOW
+		["Tel'Abim"] = "泰拉比姆", -- TurtleWOW
+		["Winter Veil Vale"] = "冬幕节峡谷", -- TurtleWOW
+
+		-- Burning Crusade
+		
+		-- Subzones used for displaying instances.
+		["Plaguewood"] = "瘟疫之地",
+		["Hellfire Citadel"] = "地狱火堡垒",
+		["Auchindoun"] = "奥金顿",
+		["The Bone Wastes"] = "白骨荒野",
+		["Coilfang Reservoir"] = "盘牙水库",
+
+		["Azuremyst Isle"] = "秘蓝岛",
+		["Bloodmyst Isle"] = "秘血岛",
+		["Eversong Woods"] = "永歌森林",
+		["Ghostlands"] = "幽魂之地",
+		["The Exodar"] = "埃索达",
+		["Silvermoon City"] = "银月城",
+		["Shadowmoon Valley"] = "影月谷",
+		["Black Temple"] = "黑暗神殿",
+		["Terokkar Forest"] = "泰罗卡森林",
+		["Auchenai Crypts"] = "奥金尼地穴",
+		["Mana-Tombs"] = "法力陵墓",
+		["Shadow Labyrinth"] = "暗影迷宫",
+		["Sethekk Halls"] = "塞泰克大厅",
+		["Hellfire Peninsula"] = "地狱火半岛",
+		["The Dark Portal"] = "黑暗之门",
+		["Hellfire Ramparts"] = "地狱火城墙",
+		["The Blood Furnace"] = "鲜血熔炉",
+		["The Shattered Halls"] = "破碎大厅",
+		["Magtheridon's Lair"] = "玛瑟里顿的巢穴",
+		["Nagrand"] = "纳格兰",
+		["Zangarmarsh"] = "赞加沼泽",
+		["The Slave Pens"] = "奴隶围栏",
+		["The Underbog"] = "幽暗沼泽",
+		["The Steamvault"] = "蒸汽地窟",
+		["Serpentshrine Cavern"] = "毒蛇神殿洞穴",
+		["Blade's Edge Mountains"] = "刀锋山",
+		["Gruul's Lair"] = "格鲁尔的巢穴",
+		["Netherstorm"] = "虚空风暴",
+		["Tempest Keep"] = "风暴要塞",
+		["The Mechanar"] = "能源舰",
+		["The Botanica"] = "生态船",
+		["The Arcatraz"] = "禁魔监狱",
+		["Eye of the Storm"] = "风暴之眼",
+		["Shattrath City"] = "沙塔斯城",
+		["Karazhan"] = "卡拉赞",
+		["Caverns of Time"] = "时光之穴",
+		["Zul'Aman"] = "祖阿曼",
+		["Sunken Temple"] = "沉没的神庙",
+
+		-- BigWigs区域数据
+		["Outdoor Raid Bosses"] = "世界Boss",
+		["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+		["Battlegrounds"] = "战场",
 	}
 end)
 
