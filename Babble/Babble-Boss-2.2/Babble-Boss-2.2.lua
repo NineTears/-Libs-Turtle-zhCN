@@ -1627,7 +1627,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Gothik the Harvester"] = "收割者戈提克",
         ["Highlord Mograine"] = "大领主莫格莱尼",
         ["Thane Korth'azz"] = "库尔塔兹领主",
-        ["Lady Blaumeux"] = "女公爵布劳缪克丝",
+        ["Lady Blaumeux"] = "女公爵布洛莫斯",  --同步乌龟亚服4DK黑水Boss名称
         ["Sir Zeliek"] = "瑟里耶克爵士",
         ["The Four Horsemen"] = "四骑士",
         ["Noth the Plaguebringer"] = "瘟疫者诺斯",
@@ -1927,7 +1927,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Charlga Razorflank"] = "卡尔加·刺肋",
         ["Earthcaller Halmgar"] = "唤地者哈穆加",
         ["Tuten'kash"] = "图特卡什",
-        ["Lady Falther'ess"] = "法瑟蕾丝夫人",
+        ["Lady Falther'ess"] = "法瑟蕾丝女士",
         ["Mordresh Fire Eye"] = "火眼莫德雷斯",
         ["Glutton"] = "暴食者",
         ["Ragglesnout"] = "拉戈斯诺特",
