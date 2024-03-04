@@ -476,6 +476,9 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Phantom Servant"] = true,
         ["Dark Rider Champion"] = true,
         ["Hive'Zara Soldier"] = true,
+        ["Zealot Zath"] = true,
+        ["Zealot Lor'Khan"] = true,
+        ["High Priest Thekal"] = true,
 	}
 end)
 
@@ -2051,6 +2054,9 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Phantom Servant"] = "幻影仆从",
         ["Dark Rider Champion"] = "黑暗骑士勇士",
         ["Hive'Zara Soldier"] = "佐拉士兵",
+        ["Zealot Zath"] = "狂热者札斯",
+        ["Zealot Lor'Khan"] = "狂热者洛卡恩",
+        ["High Priest Thekal"] = "古拉巴什食腐者",
 	}
 end)
 
