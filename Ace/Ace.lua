@@ -373,9 +373,15 @@ function Ace.toggle(val)
 end
 
 function Ace.trim(str, opt)
-	if( (not opt) or (opt=="left" ) ) then str = gsub(str, "^%s*", "") end
-	if( (not opt) or (opt=="right") ) then str = gsub(str, "%s*$", "") end
-	return str
+    if (type(str) == "string") and (str ~= nil) then
+      if (not opt) or (opt == "left") then
+          str = string.gsub(str, "^%s+", "")
+      end
+      if (not opt) or (opt == "rigth") then
+          str = string.gsub(str, "%s+$", "")
+      end
+      return str
+    end
 end
 
 
