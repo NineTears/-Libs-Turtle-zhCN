@@ -11,7 +11,7 @@ Dependencies: AceLibrary, AceLocale-2.2
 
 -- Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
--- Last update: 2024-02-29
+-- Last update: 2024-03-09
 
 local MAJOR_VERSION = "Babble-Spell-2.2"
 local MINOR_VERSION = tonumber(string.sub("$Revision: 25189 $", 12, -3))
@@ -1375,6 +1375,7 @@ BabbleSpell:RegisterTranslations("enUS", function()
 		["Tremor Totem"] = true,
 		["Tribal Leatherworking"] = true,
 		["Trueshot Aura"] = true,
+		["Trueshot"] = true,
 		["Turn Undead"] = true,
 		["Twisted Tranquility"] = true,
 		["Two-Handed Axes and Maces"] = true,
@@ -8231,6 +8232,7 @@ BabbleSpell:RegisterTranslations("zhCN", function()
         ["Tremor Totem"] = "战栗图腾",
         ["Tribal Leatherworking"] = "部族制皮",
         ["Trueshot Aura"] = "强击光环",
+        ["Trueshot"] = "稳固射击",
         ["Turn Undead"] = "超度亡灵",
         ["Twisted Tranquility"] = "扭曲宁静",
         ["Two-Handed Axes and Maces"] = "双手斧和锤",
@@ -10828,7 +10830,7 @@ local spellIcons = {
 	["Attacking"]="Temp",
 	["Aura of Command"]="INV_Banner_03",
 	["Aural Shock"]="Spell_Shadow_Possession",
-	["Auto Shot"]="Ability_Whirlwind",
+	["Auto Shot"]="Ability_PierceDamage",
 	["Avoidance"] = "Ability_Warrior_Revenge",
 	["Axe Flurry"]="INV_Axe_06",
 	["Axe Specialization"]="INV_Axe_06",
@@ -12033,6 +12035,7 @@ local spellIcons = {
 	["Travel Form"]="Ability_Druid_TravelForm",
 	["Tremor Totem"]="Spell_Nature_TremorTotem",
 	["Trueshot Aura"]="Ability_TrueShot",
+	["Trueshot"]="Ability_SearingArrow",
 	["Turn Undead"]="Spell_Holy_TurnUndead",
 	["Twisted Tranquility"]="Spell_Nature_Tranquility",
 	["Two-Handed Axes and Maces"]="INV_Axe_10",
