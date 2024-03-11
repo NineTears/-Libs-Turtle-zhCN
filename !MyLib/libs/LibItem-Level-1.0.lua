@@ -15515,3 +15515,4 @@ end
 LID_Level = deepcopy(lib)
 LIDL = deepcopy(lib)
 LibItem_Level = deepcopy(lib.Item_Level)
+SellValues = deepcopy(lib.Item_Level)
