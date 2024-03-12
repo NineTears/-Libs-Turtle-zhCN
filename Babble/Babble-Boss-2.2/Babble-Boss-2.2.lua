@@ -1630,7 +1630,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Highlord Mograine"] = "大领主莫格莱尼",
         ["Thane Korth'azz"] = "库尔塔兹领主",
         ["Lady Blaumeux"] = "女公爵布洛莫斯",  --同步乌龟亚服4DK黑水Boss名称
-        ["Sir Zeliek"] = "瑟里耶克爵士",
+        ["Sir Zeliek"] = "札里克爵士",
         ["The Four Horsemen"] = "四骑士",
         ["Noth the Plaguebringer"] = "瘟疫者诺斯",
         ["Heigan the Unclean"] = "肮脏者海根",
