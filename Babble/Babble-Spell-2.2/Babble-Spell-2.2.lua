@@ -1456,6 +1456,10 @@ BabbleSpell:RegisterTranslations("enUS", function()
 		["Wrath of Air Totem"] = true,
 		["Wrath"] = true,
 		["Wyvern Sting"] = true,
+		["Brain Wash Totem"] = true,
+		["Improved Seal of Justice"] = true,
+		["Lightning Totem"] = true,
+		["Powerful Healing Ward"] = true,
 	}
 end)
 
@@ -8313,6 +8317,10 @@ BabbleSpell:RegisterTranslations("zhCN", function()
         ["Wrath of Air Totem"] = "风怒图腾",
         ["Wrath"] = "愤怒",
         ["Wyvern Sting"] = "翼龙钉刺",
+		["Brain Wash Totem"] = "洗脑图腾",
+		["Improved Seal of Justice"] = "强化公正圣印",
+		["Lightning Totem"] = "闪电图腾",
+		["Powerful Healing Ward"] = "强力治疗结界",
 	}
 end)
 
