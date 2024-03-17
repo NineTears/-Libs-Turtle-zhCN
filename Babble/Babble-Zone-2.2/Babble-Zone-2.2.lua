@@ -211,6 +211,9 @@ BabbleZone:RegisterTranslations("enUS", function()
 		["Outdoor Raid Bosses"] = true,
 		["Outdoor Raid Bosses Zone"] = true,
 		["Battlegrounds"] = true,
+		["Sapphiron's Lair"] = true,
+		["Kel'Thuzad Chamber"] = true,
+		["The Scarab Wall"] = true,
 	}
 end)
 
@@ -992,6 +995,9 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Outdoor Raid Bosses"] = "世界Boss",
 		["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 		["Battlegrounds"] = "战场",
+		["Sapphiron's Lair"] = "萨菲隆的巢穴",
+		["Kel'Thuzad Chamber"] = "克尔苏加德的大厅",
+		["The Scarab Wall"] = "甲虫之墙",
 	}
 end)
 
