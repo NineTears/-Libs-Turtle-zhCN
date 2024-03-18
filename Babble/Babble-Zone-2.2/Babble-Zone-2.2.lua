@@ -214,6 +214,9 @@ BabbleZone:RegisterTranslations("enUS", function()
 		["Sapphiron's Lair"] = true,
 		["Kel'Thuzad Chamber"] = true,
 		["The Scarab Wall"] = true,
+		["Edge of Madness"] = true,
+		["Hall of Binding"] = true,
+		["Blackrock Stadium"] = true,
 	}
 end)
 
@@ -995,9 +998,12 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Outdoor Raid Bosses"] = "世界Boss",
 		["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 		["Battlegrounds"] = "战场",
-		["Sapphiron's Lair"] = "萨菲隆的巢穴",
+		["Sapphiron's Lair"] = "冰霜巨龙的大厅",
 		["Kel'Thuzad Chamber"] = "克尔苏加德的大厅",
 		["The Scarab Wall"] = "甲虫之墙",
+		["Edge of Madness"] = "疯狂之缘",
+		["Hall of Binding"] = "禁锢之厅",
+		["Blackrock Stadium"] = "黑石竞技场",
 	}
 end)
 
