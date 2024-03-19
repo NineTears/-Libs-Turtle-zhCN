@@ -58,6 +58,8 @@ local Mount_List = {
     "INV_ValentinesBoxOfChocolates02",  --粉色马
     "INV_ValentinesCard01",   --粉色虎
     "ability_hunter_pet_dragonhawk",  --龙鹰
+    "Ability_Hunter_Pet_TallStrider",
+    "INV_Misc_Horn_01",
 }
 
 function lib:PLAYER_AURAS_CHANGED()
