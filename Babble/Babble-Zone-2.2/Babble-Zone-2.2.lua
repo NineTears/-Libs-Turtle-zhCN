@@ -210,6 +210,7 @@ BabbleZone:RegisterTranslations("enUS", function()
 		-- BigWigs区域数据
 		["Outdoor Raid Bosses"] = true,
 		["Outdoor Raid Bosses Zone"] = true,
+		["Other"] = true,
 		["Battlegrounds"] = true,
 		["Sapphiron's Lair"] = true,
 		["Kel'Thuzad Chamber"] = true,
@@ -997,6 +998,7 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		-- BigWigs区域数据
 		["Outdoor Raid Bosses"] = "世界Boss",
 		["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+		["Other"] = "其他",
 		["Battlegrounds"] = "战场",
 		["Sapphiron's Lair"] = "冰霜巨龙的大厅",
 		["Kel'Thuzad Chamber"] = "克尔苏加德的大厅",
