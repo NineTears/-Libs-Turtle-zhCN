@@ -212,6 +212,7 @@ BabbleZone:RegisterTranslations("enUS", function()
 		["Outdoor Raid Bosses Zone"] = true,
 		["Other"] = true,
 		["Battlegrounds"] = true,
+		["Stonard"] = true,
 		["Sapphiron's Lair"] = true,
 		["Kel'Thuzad Chamber"] = true,
 		["The Scarab Wall"] = true,
@@ -955,7 +956,7 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Auchindoun"] = "奥金顿",
 		["The Bone Wastes"] = "白骨荒野",
 		["Coilfang Reservoir"] = "盘牙水库",
-
+		
 		["Azuremyst Isle"] = "秘蓝岛",
 		["Bloodmyst Isle"] = "秘血岛",
 		["Eversong Woods"] = "永歌森林",
@@ -1000,6 +1001,7 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 		["Other"] = "其他",
 		["Battlegrounds"] = "战场",
+		["Stonard"] = "斯通纳德",
 		["Sapphiron's Lair"] = "冰霜巨龙的大厅",
 		["Kel'Thuzad Chamber"] = "克尔苏加德的大厅",
 		["The Scarab Wall"] = "甲虫之墙",
