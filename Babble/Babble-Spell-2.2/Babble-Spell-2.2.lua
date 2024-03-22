@@ -1460,6 +1460,8 @@ BabbleSpell:RegisterTranslations("enUS", function()
 		["Improved Seal of Justice"] = true,
 		["Lightning Totem"] = true,
 		["Powerful Healing Ward"] = true,
+		["Elemental Vulnerability"] = true,
+		["Fire Strike"] = true,
 	}
 end)
 
@@ -8321,6 +8323,8 @@ BabbleSpell:RegisterTranslations("zhCN", function()
 		["Improved Seal of Justice"] = "强化公正圣印",
 		["Lightning Totem"] = "闪电图腾",
 		["Powerful Healing Ward"] = "强力治疗结界",
+		["Elemental Vulnerability"] = "元素易伤",
+		["Fire Strike"] = "火焰打击",
 	}
 end)
 
