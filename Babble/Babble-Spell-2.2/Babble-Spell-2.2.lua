@@ -1462,6 +1462,8 @@ BabbleSpell:RegisterTranslations("enUS", function()
 		["Powerful Healing Ward"] = true,
 		["Elemental Vulnerability"] = true,
 		["Fire Strike"] = true,
+		["Entangling Roots"] = true,
+		["Dust Cloud"] = true,
 	}
 end)
 
@@ -8325,6 +8327,8 @@ BabbleSpell:RegisterTranslations("zhCN", function()
 		["Powerful Healing Ward"] = "强力治疗结界",
 		["Elemental Vulnerability"] = "元素易伤",
 		["Fire Strike"] = "火焰打击",
+		["Entangling Roots"] = "纠缠根须",
+		["Dust Cloud"] = "灰尘之云",
 	}
 end)
 
