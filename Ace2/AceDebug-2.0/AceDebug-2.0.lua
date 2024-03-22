@@ -34,14 +34,14 @@ elseif GetLocale() == "zhTW" then
 	DEBUGGING = "除錯"
 	TOGGLE_DEBUGGING = "啟用/停用除錯功能"
 elseif GetLocale() == "zhCN" then
-	DEBUGGING = "除错"
-	TOGGLE_DEBUGGING = "启用/停用除错功能"
+    DEBUGGING = "调试"
+    TOGGLE_DEBUGGING = "启用/禁用调试"
 elseif GetLocale() == "ruRU" then
 	DEBUGGING = "Отладка"
 	TOGGLE_DEBUGGING = "Вкл./Выкл. отладку для этого аддона."
 else -- enUS
-	DEBUGGING = "Debugging"
-	TOGGLE_DEBUGGING = "Enable/disable debugging"
+    DEBUGGING = "调试"
+    TOGGLE_DEBUGGING = "启用/禁用调试"
 end
 
 local table_setn
