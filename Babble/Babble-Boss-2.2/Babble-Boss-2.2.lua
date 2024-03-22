@@ -462,6 +462,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Venom Stalker"] = true,        --纳克萨玛斯
         ["Living Monstrosity"] = true,        --纳克萨玛斯
         ["Necro Stalker"] = true,        --纳克萨玛斯
+        ["Crypt Guard"] = true,       --纳克萨玛斯
         ["Hive'Zara Soldier"] = true,        --AQ40
         ["Anubisath Sentinel"] = true,        --AQ40
         ["Glob of Viscidus"] = true,        --AQ40
@@ -2053,6 +2054,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Venom Stalker"] = "毒液捕猎者",        --纳克萨玛斯
         ["Living Monstrosity"] = "畸形妖",        --纳克萨玛斯
         ["Necro Stalker"] = "死灵捕猎者",        --纳克萨玛斯
+        ["Crypt Guard"] = "地穴卫士",       --纳克萨玛斯
         ["Hive'Zara Soldier"] = "佐拉士兵",        --AQ40
         ["Anubisath Sentinel"] = "阿努比萨斯哨兵",        --AQ40
         ["Glob of Viscidus"] = "维希度斯水滴",        --AQ40
