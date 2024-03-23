@@ -8321,14 +8321,14 @@ BabbleSpell:RegisterTranslations("zhCN", function()
         ["Wrath of Air Totem"] = "风怒图腾",
         ["Wrath"] = "愤怒",
         ["Wyvern Sting"] = "翼龙钉刺",
-		["Brain Wash Totem"] = "洗脑图腾",
-		["Improved Seal of Justice"] = "强化公正圣印",
-		["Lightning Totem"] = "闪电图腾",
-		["Powerful Healing Ward"] = "强力治疗结界",
-		["Elemental Vulnerability"] = "元素易伤",
-		["Fire Strike"] = "火焰打击",
-		["Entangling Roots"] = "纠缠根须",
-		["Dust Cloud"] = "灰尘之云",
+        ["Brain Wash Totem"] = "洗脑图腾",
+        ["Improved Seal of Justice"] = "强化公正圣印",
+        ["Lightning Totem"] = "闪电图腾",
+        ["Powerful Healing Ward"] = "强力治疗结界",
+        ["Elemental Vulnerability"] = "元素易伤",
+        ["Fire Strike"] = "火焰打击",
+        ["Entangling Roots"] = "纠缠根须",
+        ["Dust Cloud"] = "灰尘之云",
 	}
 end)
 

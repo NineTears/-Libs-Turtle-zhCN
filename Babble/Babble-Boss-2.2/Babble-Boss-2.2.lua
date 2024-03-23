@@ -445,7 +445,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
 		["Rethilgore"] = true,
 		["Atiesh"] = true,
 		["Stratholme Courier"] = true,
-		["Elder Mottled Boar"] = true;	
+		["Elder Mottled Boar"] = true,	
 		["Stoneskin Gargoyle"] = true,
 		["Gurubashi Berserker"] = true,
 		["Ancient Core Hound"] = true,

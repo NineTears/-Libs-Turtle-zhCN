@@ -956,7 +956,7 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Auchindoun"] = "奥金顿",
 		["The Bone Wastes"] = "白骨荒野",
 		["Coilfang Reservoir"] = "盘牙水库",
-		
+
 		["Azuremyst Isle"] = "秘蓝岛",
 		["Bloodmyst Isle"] = "秘血岛",
 		["Eversong Woods"] = "永歌森林",
