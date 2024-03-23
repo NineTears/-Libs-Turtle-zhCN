@@ -998,7 +998,7 @@ BabbleZone:RegisterTranslations("zhCN", function()
 
 		-- BigWigs区域数据
 		["Outdoor Raid Bosses"] = "世界Boss",
-		["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+		["Outdoor Raid Bosses Zone"] = "世界Boss区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 		["Other"] = "其他",
 		["Battlegrounds"] = "战场",
 		["Stonard"] = "斯通纳德",
