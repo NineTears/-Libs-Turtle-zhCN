@@ -76,6 +76,7 @@ PT\Elements\AQ\PTEmbedElemAhnQiraj.lua
 PT\Elements\ZG\PTEmbedElemZulGurub.lua
 
 Dewdrop-2.0\Dewdrop-2.0.lua
+Hewdrop-2.0\Hewdrop-2.0.lua
 DruidManaLib-1.0\DruidManaLib-1.0.lua
 
 Tablet-2.0\Tablet-2.0.lua
