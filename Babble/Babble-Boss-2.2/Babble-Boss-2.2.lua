@@ -493,6 +493,7 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Captain Galvangar"] = true,       --战场
         ["Captain Balinda Stonehearth"] = true,       --战场
         ["Korrak the Bloodrager"] = true,       --战场
+        ["Shade of Taerar"] = true,
 	}
 end)
 
@@ -2085,6 +2086,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Captain Galvangar"] = "加尔范上尉",       --战场
         ["Captain Balinda Stonehearth"] = "巴琳达·斯通赫尔斯",       --战场
         ["Korrak the Bloodrager"] = "血怒者科尔拉克",       --战场
+        ["Shade of Taerar"] = "泰拉尔之影",
 	}
 end)
 
