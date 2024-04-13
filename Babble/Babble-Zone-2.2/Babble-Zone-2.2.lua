@@ -206,6 +206,7 @@ BabbleZone:RegisterTranslations("enUS", function()
 		["Caverns of Time"] = true,
 		["Zul'Aman"] = true,
 		["Sunken Temple"] = true,
+		["Thalassian Highlands"] = true,
 
 		-- BigWigs区域数据
 		["Outdoor Raid Bosses"] = true,
@@ -995,6 +996,7 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Caverns of Time"] = "时光之穴",
 		["Zul'Aman"] = "祖阿曼",
 		["Sunken Temple"] = "沉没的神庙",
+		["Thalassian Highlands"] = "萨拉斯高地",
 
 		-- BigWigs区域数据
 		["Outdoor Raid Bosses"] = "世界Boss",

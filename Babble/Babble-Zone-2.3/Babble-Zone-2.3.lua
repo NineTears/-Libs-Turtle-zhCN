@@ -206,6 +206,7 @@ BabbleZone:RegisterTranslations("enUS", function()
 		["Caverns of Time"] = true,
 		["Zul'Aman"] = true,
 		["Sunken Temple"] = true,
+		["Thalassian Highlands"] = true,
 
 		-- BigWigs区域数据
 		["Outdoor Raid Bosses"] = true,
@@ -956,7 +957,7 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Auchindoun"] = "奥金顿",
 		["The Bone Wastes"] = "白骨荒野",
 		["Coilfang Reservoir"] = "盘牙水库",
-		
+
 		["Azuremyst Isle"] = "秘蓝岛",
 		["Bloodmyst Isle"] = "秘血岛",
 		["Eversong Woods"] = "永歌森林",
@@ -995,10 +996,11 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Caverns of Time"] = "时光之穴",
 		["Zul'Aman"] = "祖阿曼",
 		["Sunken Temple"] = "沉没的神庙",
+		["Thalassian Highlands"] = "萨拉斯高地",
 
 		-- BigWigs区域数据
 		["Outdoor Raid Bosses"] = "世界Boss",
-		["Outdoor Raid Bosses Zone"] = "世界Boss所在区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
+		["Outdoor Raid Bosses Zone"] = "世界Boss区域", -- DO NOT EVER TRANSLATE untill I find a more elegant option
 		["Other"] = "其他",
 		["Battlegrounds"] = "战场",
 		["Stonard"] = "斯通纳德",
