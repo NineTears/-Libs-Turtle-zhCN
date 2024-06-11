@@ -1,6 +1,6 @@
 ## Interface: 11200
-## Title: |cffFF4500!Libs-|RTurtle |cffff1450[红星1.30]|R
-## Title-zhCN:|cffFF4500!Libs-|RTurtle |cffff1450[红星1.30]|R
+## Title: |cffFF4500!Libs-|RTurtle |cffff1450[红星1.31]|R
+## Title-zhCN:|cffFF4500!Libs-|RTurtle |cffff1450[红星1.31]|R
 ## Notes: |cffFF4500!Libs-|RTurtle |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N本插件完全免费，请勿在第三方购买！
 ## Notes-zhCN:|cffFF4500!Libs-|RTurtle |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N本插件完全免费，请勿在第三方购买！
 ## X-Repple: 核心
@@ -89,6 +89,7 @@ Tourist-2.0\Tourist-2.0.lua
 PaintChips-2.0\PaintChips-2.0.lua
 CandyBar-2.0\CandyBar-2.0.lua
 CandyBar-2.1\CandyBar-2.1.lua
+CandyBar-2.2\CandyBar-2.2.lua
 SpellCache-1.0\SpellCache-1.0.lua
 SpellStatus-1.0\SpellStatus-1.0.lua
 SpellStatus-AimedShot-1.0\SpellStatus-AimedShot-1.0.lua
