@@ -36,6 +36,7 @@ BabbleSpellTree:RegisterTranslations("enUS", function()
 		["Balance"] = true,
 		["Feral Combat"] = true,
 		["Restoration"] = true,
+		["Nature"] = true,
 		-- Hunter
 		["Beast Mastery"] = true,
 		["Marksmanship"] = true,
@@ -77,6 +78,7 @@ BabbleSpellTree:RegisterTranslations("zhCN", function()
 		["Balance"] = "平衡",
 		["Feral Combat"] = "野性战斗",
 		["Restoration"] = "恢复",
+		["Nature"] = "自然",
 		-- Hunter
 		["Beast Mastery"] = "野兽掌握",
 		["Marksmanship"] = "射击",
