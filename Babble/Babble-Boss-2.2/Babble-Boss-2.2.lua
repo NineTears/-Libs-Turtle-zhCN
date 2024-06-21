@@ -498,6 +498,9 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Captain Balinda Stonehearth"] = true,       --战场
         ["Korrak the Bloodrager"] = true,       --战场
         ["Shade of Taerar"] = true,
+        ["Core Hound"] = true,
+        ["Flame Imp"] = true,
+        ["Lava Surger"] = true,
 	}
 end)
 
@@ -2095,6 +2098,9 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Captain Balinda Stonehearth"] = "巴琳达·斯通赫尔斯",       --战场
         ["Korrak the Bloodrager"] = "血怒者科尔拉克",       --战场
         ["Shade of Taerar"] = "泰拉尔之影",
+        ["Core Hound"] = "熔火恶犬",
+        ["Flame Imp"] = "烈焰小鬼",
+        ["Lava Surger"] = "熔岩奔腾者",
 	}
 end)
 
