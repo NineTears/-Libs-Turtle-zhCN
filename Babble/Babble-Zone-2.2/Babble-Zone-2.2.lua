@@ -3689,7 +3689,7 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Kel'Thuzad Chamber"] = "克尔苏加德的大厅",
 		["Hall of Binding"] = "禁锢之厅",
 		["Blackrock Stadium"] = "黑石竞技场",
-		["Ragnaros' Lair"] = "拉格纳罗斯的巢穴",
+		["Ragnaros' Lair"] = "拉格纳罗斯之巢",
 	}
 end)
 
