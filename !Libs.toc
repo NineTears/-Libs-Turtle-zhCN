@@ -4,7 +4,7 @@
 ## Notes: |cffFF4500!Libs-|RTurtle |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N本插件完全免费，请勿在第三方购买！
 ## Notes-zhCN:|cffFF4500!Libs-|RTurtle |cffff1450[红星]|R由|cff33ffccNineTears(Wind)|R基于VE&凡人&高清补丁插件包Libs整合修改完成。|N本插件完全免费，请勿在第三方购买！
 ## X-Repple: 核心
-## Author: Various，VE，凡人，名字不好起，NineTears(Wind)
+## Author: Various，VE，凡人，名字不好起，NineTears(Wind)，Sunelegy
 ## Version: 1.0.3
 ## OptionalDeps: Warmup, BugGrabber
 ## X-Category: Library
