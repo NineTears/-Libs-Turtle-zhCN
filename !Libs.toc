@@ -4,7 +4,7 @@
 ## Title-zhCN:|CFFFF0000[不可禁用]|RLibs函数库
 ## Notes-zhCN:大部分插件依赖的基本函数库，为开发者提供很多方便的接口
 ## X-Repple: 核心
-## Author: Sunelegy、Various，VE、凡人、名字不好起、NineTears(Wind)
+## Author: Various，VE，凡人，名字不好起，NineTears(Wind)，Sunelegy
 ## Version: 1.0.3
 ## OptionalDeps: Warmup, BugGrabber
 ## X-Category: Library
