@@ -194,18 +194,18 @@ function FindItemInfo(item)
 	item = lower(ItemLinkToName(item))
 	local link
 	for i = 1,23 do
-		link = GetInventoryItemLink("player",i)
+		link = GetInventoryItemLink("player",i);
 		if ( link ) then
-			if ( item == lower(ItemLinkToName(link)) )then
-				return i, nil, GetInventoryItemTexture("player", i), GetInventoryItemCount("player", i)
+			if ( item == string.lower(ItemLinkToName(link)) )then
+				return i, nil, GetInventoryItemTexture('player', i), GetInventoryItemCount('player', i);
 			end
 		end
 	end
-	local bag, slot, texture, totalcount
+	local bag, slot, texture
 	local count = 0
 	local totalcount = 0
-	for i = 0,NUM_BAG_FRAMES do
-		for j = 1,MAX_CONTAINER_ITEMS do
+	for i = 0, NUM_BAG_FRAMES do
+		for j = 1, GetContainerNumSlots(i) do
 			link = GetContainerItemLink(i,j)
 			if ( link ) then
 				if ( item == lower(ItemLinkToName(link))) then
@@ -294,29 +294,31 @@ end
 --                                  e.g "Rank 1" and "1"
 local spellmaxrank = {}
 function GetSpellMaxRank(name)
-  local cache = spellmaxrank[name]
-  if cache then return cache[1], cache[2] end
-  local name = lower(name)
+	local cache = spellmaxrank[name]
+	if cache then return cache[1], cache[2] end
 
-  local rank = { 0, nil}
-  for i = 1, GetNumSpellTabs() do
-    local _, _, offset, num = GetSpellTabInfo(i)
-    local bookType = BOOKTYPE_SPELL
-    for id = offset + 1, offset + num do
-      local spellName, spellRank = GetSpellName(id, bookType)
-      if name == lower(spellName) then
-        if not rank[2] then rank[2] = spellRank end
+	local maxRank = { 0, nil }
 
-        local _, _, numRank = find(spellRank, " (%d+)$")
-        if numRank and tonumber(numRank) > rank[1] then
-          rank = { tonumber(numRank), spellRank}
-        end
-      end
-    end
-  end
+	for j = 1, 2 do
+		local bookType = j == 1 and BOOKTYPE_SPELL or BOOKTYPE_PET
+		for i = 1, GetNumSpellTabs() do
+			local _, _, offset, num = GetSpellTabInfo(i)
+			for id = offset + 1, offset + num do
+				local spellName, spellRank = GetSpellName(id, bookType)
+				if spellName == name then
+					if not maxRank[2] then maxRank[2] = spellRank end
 
-  spellmaxrank[name] = { rank[2], rank[1] }
-  return rank[2], rank[1]
+					local _, _, numRank = find(spellRank, " (%d+)$")
+					if numRank and tonumber(numRank) > maxRank[1] then
+						maxRank = { tonumber(numRank), spellRank}
+					end
+				end
+			end
+		end
+	end
+
+	spellmaxrank[name] = { maxRank[2], maxRank[1] }
+	return maxRank[2], maxRank[1]
 end
 
 -- [ GetSpellIndex ]
@@ -326,28 +328,27 @@ end
 -- return:      [number],[string]   spell index and spellbook id
 local spellindex = {}
 function GetSpellIndex(name, rank)
-  local name = lower(name)
-  local cache = spellindex[name..(rank or "")]
-  if cache then return cache[1], cache[2] end
+	local cache = spellindex[name..(rank or "")]
+	if cache then return cache[1], cache[2] end
 
-  if not rank then rank = GetSpellMaxRank(name) end
+	rank = rank or GetSpellMaxRank(name)
 
-  for i = 1, GetNumSpellTabs() do
-    local _, _, offset, num = GetSpellTabInfo(i)
-    local bookType = BOOKTYPE_SPELL
-    for id = offset + 1, offset + num do
-      local spellName, spellRank = GetSpellName(id, bookType)
-      if rank and rank == spellRank and name == lower(spellName) then
-        spellindex[name..rank] = { id, bookType }
-        return id, bookType
-      elseif not rank and name == lower(spellName) then
-        spellindex[name] = { id, bookType }
-        return id, bookType
-      end
-    end
-  end
-  spellindex[name..(rank or "")] = { nil }
-  return nil
+	for j = 1, 2 do
+		local bookType = j == 1 and BOOKTYPE_SPELL or BOOKTYPE_PET
+		for i = 1, GetNumSpellTabs() do
+			local _, _, offset, num = GetSpellTabInfo(i)
+			for id = offset + 1, offset + num do
+				local spellName, spellRank = GetSpellName(id, bookType)
+				if (not rank and name == spellName) or (rank and rank == spellRank and name == spellName) then
+					spellindex[name..(rank or "")] = { id, bookType }
+					return id, bookType
+				end
+			end
+		end
+	end
+
+	spellindex[name..(rank or "")] = { nil }
+	return nil
 end
 
 -- [ GetSpellInfo ]
@@ -364,40 +365,40 @@ end
 --              [number]            Maximum range from the target at which you can cast the spell
 local spellinfo = {}
 function GetSpellInfo(index, bookType)
-  local cache = spellinfo[index]
-  if cache then return cache[1], cache[2], cache[3] end
+	local cache = spellinfo[index]
+	if cache then return cache[1], cache[2], cache[3] end
 
-  local name, rank, id
-  local icon = ""
+	local name, rank, id
+	local icon = ""
 
-  if type(index) == "string" then
-    local _, _, sname, srank = find(index, "(.+)%((.+)%)")
-    name = sname or index
-    rank = srank or GetSpellMaxRank(name)
-    id, bookType = GetSpellIndex(name, rank)
+	if type(index) == "string" then
+		local _, _, sname, srank = find(index, "(.+)%((.+)%)")
+		name = sname or index
+		rank = srank or GetSpellMaxRank(name)
+		id, bookType = GetSpellIndex(name, rank)
 
-	-- correct name in case of wrong upper/lower cases
-    if id and bookType then
-      name = GetSpellName(id, bookType)
-    end
-  else
-    name, rank = GetSpellName(index, bookType)
-    id, bookType = GetSpellIndex(name, rank)
-  end
+		-- correct name in case of wrong upper/lower cases
+		if id and bookType then
+			name = GetSpellName(id, bookType)
+		end
+	else
+		name, rank = GetSpellName(index, bookType)
+		id, bookType = GetSpellIndex(name, rank)
+	end
 
-  if name and id then
-    icon = GetSpellTexture(id, bookType)
-  end
+	if name and id then
+		icon = GetSpellTexture(id, bookType)
+	end
 
-  spellinfo[index] = { name, rank, icon }
-  return name, rank, icon
+	spellinfo[index] = { name, rank, icon }
+	return name, rank, icon
 end
 
 -- Reset all spell caches whenever new spells are learned/unlearned
 local resetcache = CreateFrame("Frame")
 resetcache:RegisterEvent("LEARNED_SPELL_IN_TAB")
 resetcache:SetScript("OnEvent", function()
-  spellmaxrank, spellindex, spellinfo = {}, {}, {}
+	spellmaxrank, spellindex, spellinfo = {}, {}, {}
 end)
 
 -- [ 延迟函数 ]

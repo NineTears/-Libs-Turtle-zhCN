@@ -6,8 +6,11 @@
 ## X-Repple: 核心
 ## Author: Various，VE，凡人，名字不好起，Wind，Sunelegy
 ## Version: 1.0.3
+# SE\SpecialEvents-Mail-2: bigfix in ruRU (1.0.1); Babble-Item-2.0 added (1.0.2) by CFM; Babble-Spell-2.2 added more neutral and bosses spells (1.0.3)
 ## OptionalDeps: Warmup, BugGrabber
 ## X-Category: Library
+## X-Credits: Maus & Co. (Updating, localizing libraries)
+## X-Website: https://vk.com/wowruru
 
 !MyLib\api\api.xml
 !MyLib\libs\libs.xml
@@ -45,11 +48,12 @@ Ace2\AceLocale-2.2\AceLocale-2.2.lua
 Ace2\AceTab-2.0\AceTab-2.0.lua
 Ace2\AceComm-2.0\AceComm-2.0.lua
 Ace2\AceModuleCore-2.0\AceModuleCore-2.0.lua
+Ace2\StopTheSpam\StopTheSpam.lua
 
 Deformat-2.0\Deformat-2.0.lua
 Gratuity-2.0\Gratuity-2.0.lua
 
-SE\SpecialEvents-Aura-2.0\SpecialEvents-Aura-2.0.xml
+SE\SpecialEvents-Aura-2.0\SpecialEvents-Aura-2.0.lua
 SE\SpecialEvents-LearnSpell-2.0\SpecialEvents-LearnSpell-2.0.lua
 SE\SpecialEvents-Mount-2.0\SpecialEvents-Mount-2.0.lua
 SE\SpecialEvents-Movement-2.0\SpecialEvents-Movement-2.0.lua
@@ -65,7 +69,7 @@ Babble\Babble-ItemSet-2.2\Babble-ItemSet-2.2.lua
 
 
 PT\Core\PTEmbed.lua
-PT\Tradeskills\PTTradeskillsEmbed.lua
+PT\TradeSkills\PTTradeskillsEmbed.lua
 PT\Elements\Misc\PTEmbedElemMisc.lua
 PT\Elements\EquipSets\PTEmbedElemEquipSets.lua
 PT\Elements\Food\PTEmbedElemFood.lua
@@ -95,17 +99,18 @@ SpellStatus-1.0\SpellStatus-1.0.lua
 SpellStatus-AimedShot-1.0\SpellStatus-AimedShot-1.0.lua
 OneStorage-2.0\OneStorage-2.0.lua
 Surface-1.0\Surface-1.0.lua
-HealComm-1.0\HealComm-1.0.lua
 Waterfall-1.0\Waterfall-1.0.lua
 ItemBonusLib-1.0\Locales\enUS.lua
-ItemBonusLib-1.0\Locales\frFR.lua
-ItemBonusLib-1.0\Locales\deDE.lua
-ItemBonusLib-1.0\Locales\ruRU.lua
+ItemBonusLib-1.0\Locales\zhCN.lua
 ItemBonusLib-1.0\ItemBonusLib-1.0.lua
+HealComm-1.0\HealComm-1.0.lua
 FiveSecLib-1.0\FiveSecLib-1.0.lua
 CastLib-1.0\CastLib-1.0.lua
+## 鼠标提示增强
 EnhTooltip\Stubby.xml
 EnhTooltip\TinyMoneyFrame.xml
 EnhTooltip\Tooltip.xml
 
+## 边框美化
+LibIconBorder-1.0\LibIconBorder.lua
 MyTexture\skin.lua

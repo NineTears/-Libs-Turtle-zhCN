@@ -1,16 +1,16 @@
 --[[
-Name: Tablet-2.0
-Revision: $Rev: 17873 $
-Author(s): ckknight (ckknight@gmail.com)
-Website: http://ckknight.wowinterface.com/
-Documentation: http://wiki.wowace.com/index.php/Tablet-2.0
-SVN: http://svn.wowace.com/root/trunk/TabletLib/Tablet-2.0
-Description: A library to provide an efficient, featureful tooltip-style display.
-Dependencies: AceLibrary, (optional) Dewdrop-2.0
+	Name: Tablet-2.0
+	Revision: $Rev: 17880 $
+	Author(s): ckknight (ckknight@gmail.com)
+	Website: http://ckknight.wowinterface.com/
+	Documentation: http://wiki.wowace.com/index.php/Tablet-2.0
+	SVN: http://svn.wowace.com/root/trunk/TabletLib/Tablet-2.0
+	Description: A library to provide an efficient, featureful tooltip-style display.
+	Dependencies: AceLibrary, (optional) Dewdrop-2.0
 ]]
 
 local MAJOR_VERSION = "Tablet-2.0"
-local MINOR_VERSION = "$Revision: 17874 $"
+local MINOR_VERSION = "$Revision: 17880 $"
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 if not AceLibrary:IsNewVersion(MAJOR_VERSION, MINOR_VERSION) then return end

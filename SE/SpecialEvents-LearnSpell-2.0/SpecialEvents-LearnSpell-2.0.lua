@@ -55,15 +55,18 @@ end
 
 
 function lib:GetSpellList()
-  local i, rt = 1, self.vars.empty or {}
+	local rt = self.vars.empty or {}
 	self.vars.empty = nil
 
-  repeat
-    local sname, srank = GetSpellName(i, BOOKTYPE_SPELL)
-   	if sname then rt[sname] = srank end
-  	i = i+1
-		if sname then self.vars.allspells[sname..srank] = true end
-	until not GetSpellName(i, BOOKTYPE_SPELL)
+	for i = 1, GetNumSpellTabs() do
+		local _, _, offset, num = GetSpellTabInfo(i)
+		local bookType = BOOKTYPE_SPELL
+		for id = offset + 1, offset + num do
+			local sname, srank = GetSpellName(id, bookType)
+			if sname then rt[sname] = srank end
+			if sname then self.vars.allspells[sname..srank] = true end
+		end
+	end
 
 	return rt
 end

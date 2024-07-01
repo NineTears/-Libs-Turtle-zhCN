@@ -557,15 +557,15 @@ function SpellStatus:UseInventoryItem(slotId)
 	self:LevelDebug(2, "<<<< UseInventoryItem", slotId)
 end
 
-function SpellStatus:UseContainerItem(bagId, slotId)
+function SpellStatus:UseContainerItem(bagId, slotId, onself)
 	self:LevelDebug(2, ">>>> UseContainerItem", bagId, slotId)
 	
 	local itemName, itemLink = GetItemLinkData(slotId, bagId)
 	
 	if (itemLink) then
-		CastOriginal(self, "UseContainerItem", bagId, slotId, nil, nil, itemName, nil, itemLink)
-	else
-		self.hooks["UseContainerItem"](bagId, slotId)
+		CastOriginal(self, "UseContainerItem", bagId, slotId, onself, nil, itemName, nil, itemLink)
+		else
+		self.hooks["UseContainerItem"](bagId, slotId, onself)
 	end
 	
 	self:LevelDebug(2, "<<<< UseContainerItem", bagId, slotId)
@@ -586,15 +586,6 @@ function SpellStatus:ToggleGameMenu()
 	self.vars.CancelChanneling = false
 	
 	--self:LevelDebug(3, "ToggleGameMenu2", SpellIsTargeting())
-end
-
-function SpellStatus:SpellStopCasting()
-	self:LevelDebug(2, ">>>> SpellStopCasting")
-	if (self:IsCastingOrChanneling()) then
-		self.vars.SpellStopCastingActiveName = self.vars.ActiveName
-	end
-	self.hooks["SpellStopCasting"]()
-	self:LevelDebug(2, "<<<< SpellStopCasting")
 end
 
 function SpellStatus:SPELLCAST_START(spellName, duration)
