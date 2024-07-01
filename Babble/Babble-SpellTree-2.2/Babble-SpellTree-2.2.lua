@@ -14,7 +14,7 @@ Dependencies: AceLibrary, AceLocale-2.2
 -- Last update: 2024-02-29
 
 local MAJOR_VERSION = "Babble-SpellTree-2.2"
-local MINOR_VERSION = tonumber(string.sub("$Revision: 14410 $", 12, -3))
+local MINOR_VERSION = tonumber(string.sub("$Revision: 14420 $", 12, -3))
 
 if not AceLibrary then error(MAJOR_VERSION .. " requires AceLibrary") end
 
