@@ -63,7 +63,6 @@ local function InitializeHooks(self)
 	self:Hook("UseInventoryItem")
 	self:Hook("UseContainerItem")
 	self:Hook("ToggleGameMenu")
-	self:Hook("SpellStopCasting")
 end
 
 local function InitializeEventRegisters(self)
