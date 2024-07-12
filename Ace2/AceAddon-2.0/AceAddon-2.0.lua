@@ -410,8 +410,8 @@ else -- enUS
 	CREDITS = "Credits"
 	COMMANDS = "Commands"
 	
-    ABOUT = "关于"
-    PRINT_ADDON_INFO = "打印插件信息"
+	ABOUT = "关于"
+	PRINT_ADDON_INFO = "打印插件信息"
 	
 	CATEGORIES = {
 		["Action Bars"] = "Action Bars",
