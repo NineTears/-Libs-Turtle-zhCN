@@ -376,6 +376,176 @@ function lib:DebuffIter(unitid)
 	end
 	return f, unitid, nil
 end
+
+--------------------------------
+--         自建的函数         --
+--------------------------------
+local _G = _G
+local GetInventorySlotInfo = GetInventorySlotInfo
+
+function UnitHasAura(unit, aura)
+	if (not unit or not aura) then
+		return false
+	end
+	
+	auratooltip:SetOwner(UIParent, "ANCHOR_NONE")
+	
+	aura = string.gsub(aura, "_", " ")
+	
+	if string.lower(unit) == "mainhand" then
+		auratooltip:ClearLines()
+		auratooltip:SetInventoryItem("player",GetInventorySlotInfo("MainHandSlot"))
+		for i = 1, auratooltip:NumLines() do
+			if string.find((_G["auratooltipTextLeft"..i]:GetText() or ""), aura) then
+				return true
+			end
+		end
+	end
+
+	if string.lower(unit) == "offhand" then
+		auratooltip:ClearLines()
+		auratooltip:SetInventoryItem("player", GetInventorySlotInfo("SecondaryHandSlot"))
+		for i=1, auratooltip:NumLines() do
+			if string.find((_G["auratooltipTextLeft"..i]:GetText() or ""), aura) then
+				return true
+			end
+		end
+	end
+
+	local i = 1
+	while UnitBuff(unit, i) do 
+		auratooltip:ClearLines()
+		auratooltip:SetUnitBuff(unit, i)
+		if string.find(auratooltipTextLeft1:GetText(), aura) then
+			return true, i
+		end
+		i = i + 1
+	end
+
+	local i = 1
+	while UnitDebuff(unit, i) do 
+		auratooltip:ClearLines()
+		auratooltip:SetUnitDebuff(unit, i)
+		if string.find(auratooltipTextLeft1:GetText(), aura) then
+			return true, i
+		end
+		i = i + 1
+	end
+	
+	return false
+end
+
+function MyBuff(aura)
+	if (not aura) then
+		return false
+	end
+
+	auratooltip:SetOwner(UIParent, "ANCHOR_NONE")
+	
+	aura = string.gsub(aura, "_", " ")
+	
+	if string.lower("player") == "mainhand" then
+		auratooltip:ClearLines()
+		auratooltip:SetInventoryItem("player",GetInventorySlotInfo("MainHandSlot"))
+		for i = 1, auratooltip:NumLines() do
+			if string.find((_G["auratooltipTextLeft"..i]:GetText() or ""), aura) then
+				return true
+			end
+		end
+	end
+
+	if string.lower("player") == "offhand" then
+		auratooltip:ClearLines()
+		auratooltip:SetInventoryItem("player", GetInventorySlotInfo("SecondaryHandSlot"))
+		for i=1, auratooltip:NumLines() do
+			if string.find((_G["auratooltipTextLeft"..i]:GetText() or ""), aura) then
+				return true
+			end
+		end
+	end
+
+	local i = 1
+	while UnitBuff("player", i) do 
+		auratooltip:ClearLines()
+		auratooltip:SetUnitBuff("player", i)
+		if string.find(auratooltipTextLeft1:GetText(), aura) then
+			return true
+		end
+		i = i + 1
+	end
+	
+	return false
+end
+
+function MyDebuff(aura)
+	if (not aura) then
+		return false
+	end
+	
+	auratooltip:SetOwner(UIParent, "ANCHOR_NONE")
+	
+	aura = string.gsub(aura, "_", " ")
+	
+	local i = 1
+	while UnitDebuff("player", i) do 
+		auratooltip:ClearLines()
+		auratooltip:SetUnitDebuff("player", i)
+		if string.find(auratooltipTextLeft1:GetText(), aura) then
+			return true
+		end
+		i = i + 1
+	end
+	
+	return false
+end
+
+function TarBuff(aura)
+	if (not aura) then
+		return false
+	end
+	
+	auratooltip:SetOwner(UIParent, "ANCHOR_NONE")
+
+	aura = string.gsub(aura, "_", " ")
+	
+	local i = 1
+	while UnitBuff("target", i) do 
+		auratooltip:ClearLines()
+		auratooltip:SetUnitBuff("target", i)
+		if string.find(auratooltipTextLeft1:GetText(), aura) then
+			return true
+		end
+		i = i + 1
+	end
+	
+	return false
+end
+
+function TarDebuff(aura)
+	if (not aura) then
+		return false
+	end
+	
+	auratooltip:SetOwner(UIParent, "ANCHOR_NONE")
+
+	aura = string.gsub(aura, "_", " ")
+	
+	local i = 1
+	while UnitDebuff("target", i) do 
+		auratooltip:ClearLines()
+		auratooltip:SetUnitDebuff("target", i)
+		if string.find(auratooltipTextLeft1:GetText(), aura) then
+			return true
+		end
+		i = i + 1
+	end	
+	
+	return false
+end
+
+function IsBuffActive(unit, aura)
+	return UnitHasAura(unit, aura)
+end
 --------------------------------
 --      Load this bitch!      --
 --------------------------------
