@@ -1560,6 +1560,7 @@ BabbleZone:RegisterTranslations("enUS", function()
 	["Hall of Binding"] = true,
 	["Blackrock Stadium"] = true,
 	["Ragnaros' Lair"] = true,
+	["Elders' Square"] = true,
 	}
 end)
 
@@ -3690,6 +3691,7 @@ BabbleZone:RegisterTranslations("zhCN", function()
 		["Hall of Binding"] = "禁锢之厅",
 		["Blackrock Stadium"] = "黑石竞技场",
 		["Ragnaros' Lair"] = "拉格纳罗斯之巢",
+		["Elders' Square"] = "长者广场",
 	}
 end)
 
