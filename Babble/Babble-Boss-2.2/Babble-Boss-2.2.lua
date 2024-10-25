@@ -503,6 +503,8 @@ BabbleBoss:RegisterTranslations("enUS", function()
         ["Core Hound"] = true,
         ["Flame Imp"] = true,
         ["Lava Surger"] = true,
+        ["Gozzo"] = true,
+        ["Liang"] = true,
 	}
 end)
 
@@ -2109,6 +2111,8 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Core Hound"] = "熔火恶犬",
         ["Flame Imp"] = "烈焰小鬼",
         ["Lava Surger"] = "熔岩奔腾者",
+        ["Gozzo"] = "古祖",
+        ["Liang"] = "梁",
 	}
 end)
 
