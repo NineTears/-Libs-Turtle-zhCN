@@ -223,7 +223,7 @@ function CastLib:CastSpellByName(spellName, onSelf)
 	local _, _, spellName = string.find(spellName, "^([^%(]+)")
 	if not rank then
 		local i = 1
-		while GetSpellName(i, BOOKTYPE_SPELL) and i < 240 do	--借鉴某位大佬应急之法
+		while GetSpellName(i, BOOKTYPE_SPELL) and i < 300 do	--借鉴某位大佬应急之法
 			local s, r = GetSpellName(i, BOOKTYPE_SPELL)
 			if s == spellName then
 				CastLibTip:SetSpell(i, BOOKTYPE_SPELL)

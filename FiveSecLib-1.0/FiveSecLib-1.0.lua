@@ -124,7 +124,7 @@ function FiveSecLib:CastSpellByName(spell, onSelf)
 	local _, _, spellName = string.find(spell, "^([^%(]+)")
 	spellName = string.lower(spellName)
 	local i = 1
-	while GetSpellName(i, BOOKTYPE_SPELL) and i < 240 do	--借鉴某位大佬应急之法
+	while GetSpellName(i, BOOKTYPE_SPELL) and i < 300 do	--借鉴某位大佬应急之法
 		local s = GetSpellName(i, BOOKTYPE_SPELL)
 		if string.lower(s) == spellName then
 			self.Spell = GetSpellName(i, BOOKTYPE_SPELL)

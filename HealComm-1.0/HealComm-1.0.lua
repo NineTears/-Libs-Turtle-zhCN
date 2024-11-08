@@ -1440,7 +1440,7 @@ function HealComm:CastSpellByName(spellName, onSelf)
 	local _, _, spellName = string.find(spellName, "^([^%(]+)")
 	spellName = string.lower(spellName)
 	local i = 1
-	while GetSpellName(i, BOOKTYPE_SPELL) and i < 240 do	--借鉴某位大佬应急之法
+	while GetSpellName(i, BOOKTYPE_SPELL) and i < 300 do	--借鉴某位大佬应急之法
 		local s, r = GetSpellName(i, BOOKTYPE_SPELL)
 		if string.lower(s) == spellName then
 			spellName = s
