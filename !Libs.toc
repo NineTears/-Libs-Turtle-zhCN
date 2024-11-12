@@ -53,7 +53,7 @@ Ace2\StopTheSpam\StopTheSpam.lua
 Deformat-2.0\Deformat-2.0.lua
 Gratuity-2.0\Gratuity-2.0.lua
 
-SE\SpecialEvents-Aura-2.0\SpecialEvents-Aura-2.0.lua
+SE\SpecialEvents-Aura-2.0\SpecialEvents-Aura-2.0.xml
 SE\SpecialEvents-LearnSpell-2.0\SpecialEvents-LearnSpell-2.0.lua
 SE\SpecialEvents-Mount-2.0\SpecialEvents-Mount-2.0.lua
 SE\SpecialEvents-Movement-2.0\SpecialEvents-Movement-2.0.lua
