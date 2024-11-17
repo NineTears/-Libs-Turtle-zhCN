@@ -9,7 +9,7 @@ Description: A library to provide localizations for bosses.
 Dependencies: AceLibrary, AceLocale-2.2
 ]]
 
--- Wind汉化修复Turtle-WOW中文数据
+-- Sunelegy&Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
 -- Last update: 2024-02-29
 
@@ -1673,7 +1673,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Nefarian"] = "奈法利安",
         ["Vaelastrasz the Corrupt"] = "堕落的瓦拉斯塔兹",
         ["Razorgore the Untamed"] = "狂野的拉佐格尔",
-        ["Broodlord Lashlayer"] = "勒西雷尔",
+        ["Broodlord Lashlayer"] = "勒什雷尔",
         ["Chromaggus"] = "克洛玛古斯",
         ["Ebonroc"] = "埃博诺克",
         ["Firemaw"] = "费尔默",
@@ -1691,17 +1691,17 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Onyxia"] = "奥妮克希亚",
         ["Azuregos"] = "艾索雷葛斯",
         ["Lord Kazzak"] = "卡扎克",
-        ["Ysondre"] = "伊索德雷",
+        ["Ysondre"] = "伊森德雷",
         ["Emeriss"] = "艾莫莉丝",
         ["Taerar"] = "泰拉尔",
         ["Lethon"] = "雷索",
         -- TurtleWOW
-        ["Turtlhu"] = "胡龟之子",
+        ["Turtlhu"] = "胡龟",
         ["Nerubian"] = "蛛魔",
         ["Nerubian Overseer"] = "蛛怪监工",
         ["Reaver"] = "掠夺者",
         ["Mad Servant"] = "疯狂仆从",
-        ["Deathknight Cavalier"] = "死亡骑士骑兵",
+        ["Deathknight Cavalier"] = "死亡骑兵",
         ["Death Lord"] = "死亡领主",
         ["Doctor Weavil"] = "维维尔博士",
         ["Ostarius"] = "奥兹塔里亚斯",
@@ -1709,11 +1709,11 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Dark Reaver of Karazhan"] = "卡拉赞黑暗掠夺者",
         ----------------------
         ["Twilight Corrupter"] = "暮光腐蚀者",
-        ["High Priestess Jeklik"] = "高阶祭司耶克里克",
+        ["High Priestess Jeklik"] = "高阶女祭司耶克里克",
         ["High Priest Venoxis"] = "高阶祭司温诺希斯",
-        ["High Priest Thekal"] = "高阶祭司塞卡尔",
-        ["High Priestess Arlokk"] = "哈卡莱先知",
-        ["High Priestess Mar'li"] = "哈卡莱安魂者",
+        ["High Priest Thekal"] = "古拉巴什食腐者",
+        ["High Priestess Arlokk"] = "高阶女祭司娅尔罗",
+        ["High Priestess Mar'li"] = "高阶女祭司玛尔里",
         ["Jin'do the Hexxer"] = "妖术师金度",
         ["Bloodlord Mandokir"] = "血领主曼多基尔",
         ["Gahz'ranka"] = "加兹兰卡",
@@ -1783,7 +1783,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Gyth"] = "盖斯",
         ["Halycon"] = "哈雷肯",
         ["Hate'rel"] = "黑特雷尔",
-        ["Hazzas"] = "哈札斯",
+        ["Hazzas"] = "哈扎斯",
         ["Hearthsinger Forresten"] = "弗雷斯特恩",
         ["The Unforgiven"] = "不可宽恕者",
         ["High Interrogator Gerstahn"] = "审讯官格斯塔恩",
@@ -1821,7 +1821,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Overlord Wyrmthalak"] = "维姆萨拉克",
         ["Phalanx"] = "法拉克斯",
         ["Plugger Spazzring"] = "普拉格",
-        ["Postmaster Malown"] = "邮差玛罗恩",
+        ["Postmaster Malown"] = "邮差马龙",
         ["Princess Moira Bronzebeard"] = "铁炉堡公主茉艾拉·铜须",
         ["Princess Theradras"] = "瑟莱德丝公主",
         ["Prince Tortheldrin"] = "托塞德林王子",
@@ -1877,12 +1877,12 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Jergosh the Invoker"] = "祈求者耶戈什",
         ["Bazzalan"] = "巴札兰",
         ["Disciple of Naralex"] = "纳拉雷克斯的信徒",
-        ["Lord Cobrahn"] = "考布莱恩",
-        ["Lady Anacondra"] = "安娜科德拉",
+        ["Lord Cobrahn"] = "考布莱恩领主",
+        ["Lady Anacondra"] = "安娜科德拉女士",
         ["Kresh"] = "克雷什",
-        ["Lord Pythas"] = "皮萨斯",
+        ["Lord Pythas"] = "皮萨斯领主",
         ["Skum"] = "斯卡姆",
-        ["Lord Serpentis"] = "瑟芬迪斯",
+        ["Lord Serpentis"] = "瑟芬迪斯领主",
         ["Verdan the Everliving"] = "永生者沃尔丹",
         ["Mutanus the Devourer"] = "吞噬者穆坦努斯",
         ["Naralex"] = "纳拉雷克斯",
@@ -1893,9 +1893,9 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         -- TheCrescentGrove TurtleWOW
         ["Grovetender Engryss"] = "护林员恩格里斯",
         ["Keeper Ranathos"] = "守护者拉纳苏斯",
-        ["High Priestess A'lathea"] = "高阶祭司阿勒西",
+        ["High Priestess A'lathea"] = "高阶女祭司阿勒西",
         ["Fenektis the Deceiver"] = "欺诈者弗纳克提斯",
-        ["Master Raxxieth"] = "大师拉克西斯",
+        ["Master Raxxieth"] = "拉克西斯大师",
         -- HateforgeQuarry TurtleWOW
         ["High Foreman Bargul Blackhammer"] = "高级工头巴古·黑锤",
         ["Engineer Figgles"] = "工程师菲格尔斯",
@@ -1909,7 +1909,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Guard Captain Gort"] = "卫兵长高尔特",
         ["Archlich Enkhraz"] = "大巫妖安克瑞兹",
         ["Commander Andreon"] = "指挥官安德里昂",
-        ["Alarus"] = "阿雷若思",
+        ["Alarus"] = "阿拉鲁斯",
         ["Half-Buried Treasure Chest"] = "半埋宝箱",
         -- CavernsOfTimeBlackMorass TurtleWOW
         ["Chronar"] = "克罗纳",
@@ -1967,7 +1967,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Charlga Razorflank"] = "卡尔加·刺肋",
         ["Earthcaller Halmgar"] = "唤地者哈穆加",
         ["Tuten'kash"] = "图特卡什",
-        ["Lady Falther'ess"] = "法瑟蕾丝女士",
+        ["Lady Falther'ess"] = "法瑟蕾丝夫人",
         ["Mordresh Fire Eye"] = "火眼莫德雷斯",
         ["Glutton"] = "暴食者",
         ["Ragglesnout"] = "拉戈斯诺特",
@@ -1979,7 +1979,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Gahz'rilla"] = "加兹瑞拉",
         ["Chief Ukorz Sandscalp"] = "乌克兹·沙顶",
         ["Ruuzlu"] = "卢兹鲁",
-        ["Isalien"] = "依萨利恩",
+        ["Isalien"] = "伊萨利恩",
         ["Revanchion"] = "雷瓦克安",
         ["Lord Roccor"] = "洛考尔",
         ["Anub'shiah"] = "阿努希尔",
@@ -2008,7 +2008,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Electrocutioner 6000"] = "电刑器6000型",
         ["Crowd Pummeler 9-60"] = "群体打击者9-60",
         ["Dark Iron Ambassador"] = "黑铁大师",
-        ["Mekgineer Thermaplugg"] = "麦克尼尔·瑟玛普拉格",
+        ["Mekgineer Thermaplugg"] = "制造者瑟玛普拉格",
         ["Houndmaster Loksey"] = "驯犬者洛克希",
         ["Arcanist Doan"] = "秘法师杜安",
         ["Herod"] = "赫洛德",
@@ -2053,7 +2053,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Galgann Firehammer"] = "加加恩·火锤",
         ["Grimlok"] = "格瑞姆洛克",
         ["Archaedas"] = "阿扎达斯",
-        ["Sever"] = "塞沃尔",
+        ["Sever"] = "斩首者",
         ["Scorn"] = "瑟克恩",
         ["Rethilgore"] = "雷希戈尔",
         ["Atiesh"] = "埃提耶什",
@@ -2098,7 +2098,7 @@ BabbleBoss:RegisterTranslations("zhCN", function()
         ["Shade of Jin'do"] = "金度之影",        --祖格
         ["Spawn of Mar'li"] = "玛尔里的爪牙",       --祖格
         ["Chromatic Elite Guard"] = "多彩精英卫士",      --黑石塔
-        ["Death Talon Wyrmguard"] = "黑翼龙人护卫",      --黑石塔
+        ["Death Talon Wyrmguard"] = "死爪龙人护卫",      --黑石塔
         ["Blackhand Incarcerator"] = "黑手监禁者",      --黑石塔
         ["Rookery Hatcher"] = "群居孵化者",      --黑石塔
         ["Rookery Guardian"] = "群居守卫者",      --黑石塔
@@ -2168,13 +2168,13 @@ BabbleBoss:RegisterTranslations("zhTW", function()
 		["Onyxia"] = "奧妮克希亞",
 		["Azuregos"] = "艾索雷葛斯",
 		["Lord Kazzak"] = "卡札克",
-		["Ysondre"] = "伊索德雷",
+		["Ysondre"] = "伊森德雷",
 		["Emeriss"] = "艾莫莉絲",
 		["Taerar"] = "泰拉爾",
 		["Lethon"] = "雷索",
 		["High Priestess Jeklik"] = "高階祭司耶克里克",
 		["High Priest Venoxis"] = "高階祭司溫諾希斯",
-		["High Priest Thekal"] = "高阶祭司塞卡尔",
+		["High Priest Thekal"] = "古拉巴什食腐者",
 		["High Priestess Arlokk"] = "哈卡萊先知",
 		["High Priestess Mar'li"] = "哈卡萊安魂者",
 		["Jin'do the Hexxer"] = "妖術師金度",

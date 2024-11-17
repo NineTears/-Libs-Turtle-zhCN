@@ -9,7 +9,7 @@ Description: A library to provide localizations for zones.
 Dependencies: AceLibrary, AceLocale-2.2
 ]]
 
--- Wind汉化修复Turtle-WOW中文数据
+-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
 -- Last update: 2024-04-15
 

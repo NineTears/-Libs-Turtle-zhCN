@@ -7,7 +7,7 @@
 ]]
 -- Проверить ЗГ, АК20, АК40, Т3, разобраться с сетами AB
 
--- Wind汉化修复Turtle-WOW中文数据
+-- Sunelegy，Wind汉化修复Turtle-WOW中文数据
 -- https://github.com/NineTears/Libs-Turtle-zhCN
 -- Last update: 2024-02-29
 
