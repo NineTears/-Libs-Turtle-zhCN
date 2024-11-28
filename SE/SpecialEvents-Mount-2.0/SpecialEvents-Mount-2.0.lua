@@ -36,10 +36,12 @@ function activate(self, oldLib, oldDeactivate)
 			"_qirajicrystal_",				--其拉共鸣水晶		
 			
 			--------特殊坐骑请玩家前往小地图 Automaton-下马-增加坐骑 功能中添加--------
-			"hunter_pet_turtle", 			-- 乌龟坐骑 
-			"warstomp", 					-- 斑马坐骑 
-			"bullrush", 					-- 幽灵狮鹫
-			"_branch_", 					-- 驯鹿
+			"hunter_pet_turtle", 				-- 乌龟坐骑
+			"boar",								-- 长牙野猪
+			"warstomp", 						-- 斑马坐骑
+			"bullrush", 						-- 幽灵狮鹫
+			"_branch_", 						-- 驯鹿
+			"zuoqi",							-- 通用坐骑1
 			"ability_racial_bearform",
 			"ability_druid_catform",
 			"ability_druid_travelform",
@@ -49,17 +51,24 @@ function activate(self, oldLib, oldDeactivate)
 			"spell_nature_spiritwolf",
 			"spell_nature_forceofnature",
 			"inv_pet_speedy",
-			"zuoqi",
 			"inv_misc_head_dragon_black",
 			"ability_bullrush",
 			"Spell_Nature_WispSplode",
 			"inv_misc_branch_01",
-			"Spell_Nature_Swiftness",  --粉色羊
-			"INV_ValentinesBoxOfChocolates02",  --粉色马
-			"INV_ValentinesCard01",   --粉色虎
-			"ability_hunter_pet_dragonhawk",  --龙鹰
+			"Spell_Nature_Swiftness",  			-- 粉色羊
+			"INV_ValentinesBoxOfChocolates02",  -- 粉色马
+			"INV_ValentinesCard01",   			-- 粉色虎
+			"ability_hunter_pet_dragonhawk",  	-- 龙鹰
 			"Ability_Hunter_Pet_TallStrider",
 			"INV_Misc_Horn_01",
+			"hunter_pet_bear",					-- 熊
+			"hunter_pet_hippogryph",			-- 角鹰兽
+			"hunter_pet_stag1",					-- 暗角雄鹿
+			"hunter_pet_tallstrider",			-- 爱情鸟
+			"inv_misc_key_06",					-- 工程坐骑
+			"inv_misc_key_12",					-- 工程坐骑
+			"spell_nature_sentinal",			-- 乌鸦
+			"spell_magic_polymorphchicken",		-- 魔法公鸡
 		}
 	end
 	
