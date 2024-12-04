@@ -293,8 +293,9 @@ end
 -- return:      [string],[number]   maximum rank in characters and the number
 --                                  e.g "Rank 1" and "1"
 local spellmaxrank = {}
+
 function GetSpellMaxRank(name)
-	local name = string.lower(name)		-- 在缓存之前对名称小写（保证缓存的名称为小写）
+	local name = string.lower(name) -- 在缓存之前对名称小写（保证缓存的名称为小写）
 	local cache = spellmaxrank[name]
 	if cache then return cache[1], cache[2] end
 
@@ -302,17 +303,20 @@ function GetSpellMaxRank(name)
 
 	for j = 1, 2 do
 		local bookType = j == 1 and BOOKTYPE_SPELL or BOOKTYPE_PET
-		for i = 1, GetNumSpellTabs() do
-			local _, _, offset, num = GetSpellTabInfo(i)
-			for id = offset + 1, offset + num do
+		local numTabs = GetNumSpellTabs() -- 只调用一次并存储结果
+		for i = 1, numTabs do
+			local _, _, offset, numSpells = GetSpellTabInfo(i)
+			for id = offset + 1, offset + numSpells do
 				local spellName, spellRank = GetSpellName(id, bookType)
-				if string.lower(spellName) == name then
-					if not maxRank[2] then maxRank[2] = spellRank end
-					
-					local pattern = "(%d+)%s?级$|^Rank%s?(%d+)"		-- 使用统一的正则表达式匹配中文和英文客户端的等级信息
-					local _, _, numRank = string.find(spellRank, pattern)
-					if numRank and tonumber(numRank) > maxRank[1] then
-						maxRank = { tonumber(numRank), spellRank}
+				if spellName and spellName ~= "" and string.lower(spellName) == name then
+					local pattern = "(%d+)%s?级$|^Rank%s?(%d+)" -- 使用统一的正则表达式匹配中文和英文客户端的等级信息
+					local _, _, numRank = string.find(spellRank or "", pattern)
+					numRank = tonumber(numRank)
+					if numRank and numRank > maxRank[1] then
+						maxRank[1] = numRank
+						maxRank[2] = spellRank
+					elseif not maxRank[2] then
+						maxRank[2] = spellRank
 					end
 				end
 			end
@@ -320,7 +324,8 @@ function GetSpellMaxRank(name)
 	end
 
 	spellmaxrank[name] = { maxRank[2], maxRank[1] }
-	return maxRank[2], maxRank[1]
+	local Rank = maxRank
+	return maxRank[2], maxRank[1], Rank[2], Rank[1]
 end
 
 -- [ GetSpellIndex ]
