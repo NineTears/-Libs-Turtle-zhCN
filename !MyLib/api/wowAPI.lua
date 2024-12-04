@@ -343,9 +343,9 @@ function GetSpellIndex(name, rank)
 
   local numTabs = GetNumSpellTabs() -- 只调用一次并存储结果
   for i = 1, numTabs do
-    local _, _, offset, num = GetSpellTabInfo(i)
+    local _, _, offset, numSpells = GetSpellTabInfo(i)
     local bookType = BOOKTYPE_SPELL
-    for id = offset + 1, offset + num do
+    for id = offset + 1, offset + numSpells do
       local spellName, spellRank = GetSpellName(id, bookType)
       if rank and rank == spellRank and name == string.lower(spellName) then
         spellindex[name..rank] = { id, bookType }
