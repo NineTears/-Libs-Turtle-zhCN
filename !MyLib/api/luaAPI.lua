@@ -231,6 +231,20 @@ function string.reverse(str)
 end
 strrev = string.reverse
 
+function string.split(delimiter, str)
+	if type(delimiter) ~= "string" and type(delimiter) ~= "number" then
+		error(format("bad argument #1 to 'split' (string expected, got %s)", delimiter and type(delimiter) or "no value"), 2)
+	elseif type(str) ~= "string" and type(str) ~= "number" then
+		error(format("bad argument #2 to 'split' (string expected, got %s)", str and type(str) or "no value"), 2)
+	end
+
+	local fields = {}
+	gsub(str, format("([^%s]+)", delimiter), function(c) fields[getn(fields) + 1] = c end)
+
+	return unpack(fields)
+end
+strsplit = string.split
+
 local escapeSequences = {
 	["\a"] = "\\a", -- Bell
 	["\b"] = "\\b", -- Backspace
