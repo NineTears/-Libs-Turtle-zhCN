@@ -294,6 +294,7 @@ end
 --                                  e.g "Rank 1" and "1"
 local spellmaxrank = {}
 function GetSpellMaxRank(name)
+	local name = string.lower(name)		-- 在缓存之前对名称小写（保证缓存的名称为小写）
 	local cache = spellmaxrank[name]
 	if cache then return cache[1], cache[2] end
 
@@ -305,10 +306,11 @@ function GetSpellMaxRank(name)
 			local _, _, offset, num = GetSpellTabInfo(i)
 			for id = offset + 1, offset + num do
 				local spellName, spellRank = GetSpellName(id, bookType)
-				if spellName == name then
+				if string.lower(spellName) == name then
 					if not maxRank[2] then maxRank[2] = spellRank end
-
-					local _, _, numRank = find(spellRank, " (%d+)$")
+					
+					local pattern = "(%d+)%s?级$|^Rank%s?(%d+)"		-- 使用统一的正则表达式匹配中文和英文客户端的等级信息
+					local _, _, numRank = string.find(spellRank, pattern)
 					if numRank and tonumber(numRank) > maxRank[1] then
 						maxRank = { tonumber(numRank), spellRank}
 					end
@@ -328,27 +330,28 @@ end
 -- return:      [number],[string]   spell index and spellbook id
 local spellindex = {}
 function GetSpellIndex(name, rank)
-	local cache = spellindex[name..(rank or "")]
-	if cache then return cache[1], cache[2] end
+  local name = string.lower(name)
+  local cache = spellindex[name..(rank or "")]
+  if cache then return cache[1], cache[2] end
 
-	rank = rank or GetSpellMaxRank(name)
+  if not rank then rank = GetSpellMaxRank(name) end
 
-	for j = 1, 2 do
-		local bookType = j == 1 and BOOKTYPE_SPELL or BOOKTYPE_PET
-		for i = 1, GetNumSpellTabs() do
-			local _, _, offset, num = GetSpellTabInfo(i)
-			for id = offset + 1, offset + num do
-				local spellName, spellRank = GetSpellName(id, bookType)
-				if (not rank and name == spellName) or (rank and rank == spellRank and name == spellName) then
-					spellindex[name..(rank or "")] = { id, bookType }
-					return id, bookType
-				end
-			end
-		end
-	end
-
-	spellindex[name..(rank or "")] = { nil }
-	return nil
+  for i = 1, GetNumSpellTabs() do
+    local _, _, offset, num = GetSpellTabInfo(i)
+    local bookType = BOOKTYPE_SPELL
+    for id = offset + 1, offset + num do
+      local spellName, spellRank = GetSpellName(id, bookType)
+      if rank and rank == spellRank and name == string.lower(spellName) then
+        spellindex[name..rank] = { id, bookType }
+        return id, bookType
+      elseif not rank and name == string.lower(spellName) then
+        spellindex[name] = { id, bookType }
+        return id, bookType
+      end
+    end
+  end
+  spellindex[name..(rank or "")] = { nil }
+  return nil
 end
 
 -- [ GetSpellInfo ]
