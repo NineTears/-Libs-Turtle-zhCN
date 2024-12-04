@@ -324,8 +324,7 @@ function GetSpellMaxRank(name)
 	end
 
 	spellmaxrank[name] = { maxRank[2], maxRank[1] }
-	local Rank = maxRank
-	return maxRank[2], maxRank[1], Rank[2], Rank[1]
+	return maxRank[2], maxRank[1]
 end
 
 -- [ GetSpellIndex ]
