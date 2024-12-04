@@ -198,7 +198,9 @@ function CastLib:CastSpell(spellId, spellbookTabNum)
 	end
 	CastLibTip:SetSpell(spellId, spellbookTabNum)
 	local spellName, rank = GetSpellName(spellId, spellbookTabNum)
-	_,_,rank = string.find(rank,"(%d+)")
+	if rank then
+		_,_,rank = string.find(rank,"(%d+)")
+	end
 	self.Channel = spellName
 	self.Rank = rank
 	if ( SpellIsTargeting() ) then
@@ -223,7 +225,7 @@ function CastLib:CastSpellByName(spellName, onSelf)
 	local _, _, spellName = string.find(spellName, "^([^%(]+)")
 	if not rank then
 		local i = 1
-		while GetSpellName(i, BOOKTYPE_SPELL) and i < 300 do	--借鉴某位大佬应急之法
+		while GetSpellName(i, BOOKTYPE_SPELL) do
 			local s, r = GetSpellName(i, BOOKTYPE_SPELL)
 			if s == spellName then
 				CastLibTip:SetSpell(i, BOOKTYPE_SPELL)
