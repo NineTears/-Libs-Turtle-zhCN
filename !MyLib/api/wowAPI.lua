@@ -77,24 +77,24 @@ end
 --用于界面UI框架的Hook
 --举例HookAddonOrVariable("Blizzard_InspectUI", function() xxx end)
 function HookAddonOrVariable(addon, func)
-  local lurker = CreateFrame("Frame", nil)
-  lurker.func = func
-  lurker:RegisterEvent("ADDON_LOADED")
-  lurker:RegisterEvent("VARIABLES_LOADED")
-  lurker:RegisterEvent("PLAYER_ENTERING_WORLD")
-  lurker:SetScript("OnEvent",function()
-    -- only run when config is available
-    if event == "ADDON_LOADED" and not this.foundConfig then
-      return
-    elseif event == "VARIABLES_LOADED" then
-      this.foundConfig = true
-    end
+	local lurker = CreateFrame("Frame", nil)
+	lurker.func = func
+	lurker:RegisterEvent("ADDON_LOADED")
+	lurker:RegisterEvent("VARIABLES_LOADED")
+	lurker:RegisterEvent("PLAYER_ENTERING_WORLD")
+	lurker:SetScript("OnEvent", function()
+		-- only run when config is available
+		if event == "ADDON_LOADED" and not this.foundConfig then
+			return
+		elseif event == "VARIABLES_LOADED" then
+			this.foundConfig = true
+		end
 
-    if IsAddOnLoaded(addon) or _G[addon] then
-      this:func()
-      this:UnregisterAllEvents()
-    end
-  end)
+		if IsAddOnLoaded(addon) or _G[addon] then
+			this:func()
+			this:UnregisterAllEvents()
+		end
+	end)
 end
 
 function hooksecurefunc(arg1, arg2, arg3)
@@ -150,7 +150,7 @@ function GetThreatStatus(currentThreat, maxThreat)
 	if not currentThreat or currentThreat == nil then
 		currentThreat = 0
 	end
-		
+
 	if not maxThreat or maxThreat == 0 then
 		currentThreat = 0
 		maxThreat = 1
@@ -158,7 +158,7 @@ function GetThreatStatus(currentThreat, maxThreat)
 
 	local threatPercent = currentThreat / maxThreat * 100
 	if threatPercent > 100 then threatPercent = 100 end
-	
+
 	if threatPercent >= 90 then
 		return 3, threatPercent
 	elseif threatPercent >= 70 then
@@ -293,38 +293,33 @@ end
 -- return:      [string],[number]   maximum rank in characters and the number
 --                                  e.g "Rank 1" and "1"
 local spellmaxrank = {}
-
 function GetSpellMaxRank(name)
-	local name = string.lower(name) -- 在缓存之前对名称小写（保证缓存的名称为小写）
 	local cache = spellmaxrank[name]
 	if cache then return cache[1], cache[2] end
 
-	local maxRank = { 0, nil }
+	local rank = { 0, nil }
 
 	for j = 1, 2 do
 		local bookType = j == 1 and BOOKTYPE_SPELL or BOOKTYPE_PET
 		local numTabs = GetNumSpellTabs() -- 只调用一次并存储结果
 		for i = 1, numTabs do
-			local _, _, offset, numSpells = GetSpellTabInfo(i)
-			for id = offset + 1, offset + numSpells do
+			local _, _, offset, num = GetSpellTabInfo(i)
+			for id = offset + 1, offset + num do
 				local spellName, spellRank = GetSpellName(id, bookType)
-				if spellName and spellName ~= "" and string.lower(spellName) == name then
-					local pattern = "(%d+)%s?级$|^Rank%s?(%d+)" -- 使用统一的正则表达式匹配中文和英文客户端的等级信息
-					local _, _, numRank = string.find(spellRank or "", pattern)
-					numRank = tonumber(numRank)
-					if numRank and numRank > maxRank[1] then
-						maxRank[1] = numRank
-						maxRank[2] = spellRank
-					elseif not maxRank[2] then
-						maxRank[2] = spellRank
+				if name == spellName then
+					if not rank[2] then rank[2] = spellRank end
+
+					local _, _, numRank = string.find(spellRank, " (%d+)$")
+					if numRank and tonumber(numRank) > rank[1] then
+						rank = { tonumber(numRank), spellRank }
 					end
 				end
 			end
 		end
 	end
 
-	spellmaxrank[name] = { maxRank[2], maxRank[1] }
-	return maxRank[2], maxRank[1]
+	spellmaxrank[name] = { rank[2], rank[1] }
+	return rank[2], rank[1]
 end
 
 -- [ GetSpellIndex ]
@@ -334,29 +329,31 @@ end
 -- return:      [number],[string]   spell index and spellbook id
 local spellindex = {}
 function GetSpellIndex(name, rank)
-  local name = string.lower(name)
-  local cache = spellindex[name..(rank or "")]
-  if cache then return cache[1], cache[2] end
+	local cache = spellindex[name .. (rank and ("(" .. rank .. ")") or "")]
+	if cache then return cache[1], cache[2] end
 
-  if not rank then rank = GetSpellMaxRank(name) end
+	if not rank then rank = GetSpellMaxRank(name) end
 
-  local numTabs = GetNumSpellTabs() -- 只调用一次并存储结果
-  for i = 1, numTabs do
-    local _, _, offset, numSpells = GetSpellTabInfo(i)
-    local bookType = BOOKTYPE_SPELL
-    for id = offset + 1, offset + numSpells do
-      local spellName, spellRank = GetSpellName(id, bookType)
-      if rank and rank == spellRank and name == string.lower(spellName) then
-        spellindex[name..rank] = { id, bookType }
-        return id, bookType
-      elseif not rank and name == string.lower(spellName) then
-        spellindex[name] = { id, bookType }
-        return id, bookType
-      end
-    end
-  end
-  spellindex[name..(rank or "")] = { nil }
-  return nil
+	for j = 1, 2 do
+		local bookType = j == 1 and BOOKTYPE_SPELL or BOOKTYPE_PET
+		local numTabs = GetNumSpellTabs() -- 只调用一次并存储结果
+		for i = 1, numTabs do
+			local _, _, offset, num = GetSpellTabInfo(i)
+			for id = offset + 1, offset + num do
+				local spellName, spellRank = GetSpellName(id, bookType)
+				if rank and rank == spellRank and name == spellName then
+					spellindex[name .. "(" .. rank .. ")"] = { id, bookType }
+					return id, bookType
+				elseif not rank and name == spellName then
+					spellindex[name] = { id, bookType }
+					return id, bookType
+				end
+			end
+		end
+	end
+
+	spellindex[name .. (rank and ("(" .. rank .. ")") or "")] = { nil }
+	return nil
 end
 
 -- [ GetSpellInfo ]
@@ -405,6 +402,7 @@ end
 -- Reset all spell caches whenever new spells are learned/unlearned
 local resetcache = CreateFrame("Frame")
 resetcache:RegisterEvent("LEARNED_SPELL_IN_TAB")
+resetcache:RegisterEvent("SPELLS_CHANGED")
 resetcache:SetScript("OnEvent", function()
 	spellmaxrank, spellindex, spellinfo = {}, {}, {}
 end)
@@ -413,30 +411,30 @@ end)
 -- 将函数添加到FIFO（先进先出）队列，以便在短暂延迟后执行。
 -- "..."        [vararg]        function, [arguments]
 local timer
-function QueueFunction(a1,a2,a3,a4,a5,a6,a7,a8,a9)
-  if not timer then
-    timer = CreateFrame("Frame")
-    timer.queue = {}
-    timer.interval = TOOLTIP_UPDATE_TIME
-    timer.DeQueue = function()
-      local item = table.remove(timer.queue,1)
-      if item then
-        item[1](item[2],item[3],item[4],item[5],item[6],item[7],item[8],item[9])
-      end
-      if table.getn(timer.queue) == 0 then
-        timer:Hide() -- no need to run the OnUpdate when the queue is empty
-      end
-    end
-    timer:SetScript("OnUpdate",function()
-      this.sinceLast = (this.sinceLast or 0) + arg1
-      while (this.sinceLast > this.interval) do
-        this.DeQueue()
-        this.sinceLast = this.sinceLast - this.interval
-      end
-    end)
-  end
-  table.insert(timer.queue,{a1,a2,a3,a4,a5,a6,a7,a8,a9})
-  timer:Show() -- start the OnUpdate
+function QueueFunction(a1, a2, a3, a4, a5, a6, a7, a8, a9)
+	if not timer then
+		timer = CreateFrame("Frame")
+		timer.queue = {}
+		timer.interval = TOOLTIP_UPDATE_TIME
+		timer.DeQueue = function()
+			local item = table.remove(timer.queue, 1)
+			if item then
+				item[1](item[2], item[3], item[4], item[5], item[6], item[7], item[8], item[9])
+			end
+			if table.getn(timer.queue) == 0 then
+				timer:Hide() -- no need to run the OnUpdate when the queue is empty
+			end
+		end
+		timer:SetScript("OnUpdate", function()
+			this.sinceLast = (this.sinceLast or 0) + arg1
+			while (this.sinceLast > this.interval) do
+				this.DeQueue()
+				this.sinceLast = this.sinceLast - this.interval
+			end
+		end)
+	end
+	table.insert(timer.queue, { a1, a2, a3, a4, a5, a6, a7, a8, a9 })
+	timer:Show() -- start the OnUpdate
 end
 
 --单位颜色
@@ -454,11 +452,11 @@ function UnitColor(unit)
 		local color = UnitReactionColor[UnitReaction(unit, "player")]
 		if color then r, g, b = color.r, color.g, color.b end
 	end
-	
+
 	return r, g, b
 end
 
-UnitHealthBarColor = UnitColor    -- (凡人版EN_UnitFrames单位颜色，插件需调用)
+UnitHealthBarColor = UnitColor -- (凡人版EN_UnitFrames单位颜色，插件需调用)
 
 --百分比颜色
 function SetPercentColor(min, max)
@@ -466,7 +464,7 @@ function SetPercentColor(min, max)
 	local g = 1
 	local b = 0
 	if (min and max) then
-		local v =  tonumber(min) / tonumber(max)
+		local v = tonumber(min) / tonumber(max)
 		if (v >= 0 and v <= 1) then
 			if (v > 0.2) then
 				r = (1.0 - v) * 2
@@ -495,9 +493,9 @@ end
 function Over1E3toK(v)
 	local sign = v < 0 and -1 or 1
 	v = math.abs(v)
-	
+
 	if v > 1E4 then
-		text = Round(v/1E4*sign, 1) .. "万"
+		text = Round(v / 1E4 * sign, 1) .. "万"
 	else
 		text = Round(v)
 	end
@@ -535,19 +533,19 @@ function SecondsToTimeAbbrev(time, f)
 	if time <= 0 then
 		text = ""
 	elseif time < 3600 and time > 60 then
-		h = floor(time/3600)
-		m = (f ~= nil) and floor(mod(time, 3600)/60) or floor(mod(time, 3600)/60 + 1)
+		h = floor(time / 3600)
+		m = (f ~= nil) and floor(mod(time, 3600) / 60) or floor(mod(time, 3600) / 60 + 1)
 		s = mod(time, 60)
 		text = (f ~= nil) and format("|cffffffff%d|r:|cffffffff%02d|r", m, s) or format("|cffffffff%d|rm", m)
 	elseif 1 < time and time < 60 then
-		m = floor(time/60)
+		m = floor(time / 60)
 		s = mod(time, 60)
 		text = m == 0 and format("|cffffffff%d|rs", s)
 	elseif time < 1 then
 		s = mod(time, 60)
 		text = format("|cffff0000%.1f|r", Round(s, 1))
 	else
-		h = floor(time/3600 + 1)
+		h = floor(time / 3600 + 1)
 		text = format("|cffffffff%d|rh", h)
 	end
 	return text
@@ -555,7 +553,7 @@ end
 
 -- 定义自定义函数 SetSize
 function SetSize(f, w, h)
-    if not f then return end
-    f:SetWidth(w)
-    f:SetHeight(h)
+	if not f then return end
+	f:SetWidth(w)
+	f:SetHeight(h)
 end
