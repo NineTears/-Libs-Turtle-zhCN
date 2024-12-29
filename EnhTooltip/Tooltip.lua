@@ -1168,7 +1168,7 @@ function ttInitialize()
 	----  Establish hooks to all the game tooltips.
 
 	-- Hook in alternative Chat/Hyperlinking code
-	Stubby.RegisterFunctionHook("ChatFrame_OnHyperlinkShow", 200, chatHookOnHyperlinkShow)
+--	Stubby.RegisterFunctionHook("ChatFrame_OnHyperlinkShow", 200, chatHookOnHyperlinkShow)
 
 	-- Container frame linking
 	Stubby.RegisterFunctionHook("ContainerFrame_Update", 200, cfHookUpdate)
